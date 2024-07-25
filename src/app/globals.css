@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './resets.css';
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #ffe2e1;
+  --color-primary-200: #ffcac8;
+  --color-primary-300: #ffa5a2;
+  --color-primary-400: #fd706c;
+  --color-primary-500: #f6423d;
+  --color-primary-600: #e3251f;
+  --color-primary-700: #bf1b16;
+  --color-primary-800: #9e1a16;
+  --color-primary-900: #831c19;
+  --color-primary-950: #470a08;
+  --color-primary: #9e1a16;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,17 +32,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .screen_container { 
+    @apply mx-auto px-5 sm:px-10 xl:max-w-screen-xl;
+  }
+
+  .section_padding { 
+    @apply py-10;
   }
 }
