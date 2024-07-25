@@ -1,7 +1,7 @@
 import strings from "@/app/constants/strings";
 import clsx from "clsx";
 import React from "react";
-import ProjectCard from "../common/ProjectCard";
+import ProjectCard from "../project/ProjectCard";
 import professionalProjects from "@/app/contents/professional_projects";
 
 interface Props {

@@ -26,12 +26,15 @@ const ParticleBackground = () => {
 
   if (init) {
     return (
-      <Particles
-        className="relative -z-10"
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      <>
+        <div className="fixed top-0 left-0 -z-10 h-dvh w-dvw backdrop-blur-sm"></div>
+        <Particles
+          className="relative -z-20"
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+      </>
     );
   }
 

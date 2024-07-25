@@ -12,7 +12,7 @@ const LandingSection = (props: Props) => {
     <section
       className={clsx(
         props.className,
-        "screen_container section_padding relative z-0 h-[100dvh] p-10 flex flex-col items-start justify-end"
+        "screen_container section_padding relative z-0 h-dvh p-10 flex flex-col items-start justify-end"
       )}
     >
       <div>

@@ -21,6 +21,8 @@
   --color-primary-900: #831c19;
   --color-primary-950: #470a08;
   --color-primary: #9e1a16;
+
+  background-color: #d6d3d1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +35,14 @@
 
 body {
   
+}
+
+h1 { 
+  @apply text-6xl font-bold;
+}
+
+h2 { 
+  @apply text-2xl font-semibold;
 }
 
 @layer utilities {
@@ -48,3 +58,5 @@ body {
     @apply py-10;
   }
 }
+
+  

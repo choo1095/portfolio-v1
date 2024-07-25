@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <LandingSection></LandingSection>
         <div className="screen_container section_padding relative grid md:grid-cols-3 md:gap-20">
-          <div className="md:col-span-1 md:sticky md:top-10">
+          <div className="h-fit md:col-span-1 md:sticky md:top-10">
             <Me></Me>
             <LinkedInButton></LinkedInButton>
           </div>

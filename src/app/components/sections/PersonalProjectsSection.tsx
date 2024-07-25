@@ -2,7 +2,7 @@ import strings from "@/app/constants/strings";
 import personalProjects from "@/app/contents/personal_projects";
 import clsx from "clsx";
 import React from "react";
-import ProjectCard from "../common/ProjectCard";
+import ProjectCard from "../project/ProjectCard";
 
 interface Props {
   className?: string;
