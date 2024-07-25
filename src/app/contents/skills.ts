@@ -118,6 +118,23 @@ const skills: SkillCategory[] = [
     ],
   },
   {
+    title: "Mobile App Deployment",
+    skills: [
+      {
+        title: "Play Store",
+        percentage: 100,
+      },
+      {
+        title: "App Store",
+        percentage: 100,
+      },
+      {
+        title: "Firebase App Distribution",
+        percentage: 30,
+      },
+    ],
+  },
+  {
     title: "Design",
     skills: [
       {

@@ -8,6 +8,7 @@ import SkillsSection from "./components/sections/SkillsSection";
 import ProfessionalProjectsSection from "./components/sections/ProfessionalProjectsSection";
 import PersonalProjectsSection from "./components/sections/PersonalProjectsSection";
 import Footer from "./components/layout/Footer";
+import Nav from "./components/layout/Nav";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <div className="h-fit md:col-span-1 md:sticky md:top-10">
             <Me></Me>
             <LinkedInButton></LinkedInButton>
+            <Nav className="hidden md:block md:mt-20"></Nav>
           </div>
           <div className="md:col-span-2">
             <AboutMeSection></AboutMeSection>

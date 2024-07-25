@@ -293,7 +293,7 @@
       "opacity": {
         "value": {
           "min": 0.1,
-          "max": 0.5
+          "max": 0.7
         },
         "animation": {
           "count": 0,
