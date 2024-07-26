@@ -10,14 +10,14 @@ interface Props {
 
 const PersonalProjectsSection = (props: Props) => {
   return (
-    <div className={clsx(props.className, "section_padding")}>
-      <h2>{strings.personal_projects.header}</h2>
+    <section id="personal_projects" className={clsx(props.className)}>
+      <h2 className="section_header">{strings.personal_projects.header}</h2>
       <div className="space-y-3">
         {personalProjects.map((project) => (
           <ProjectCard key={project.id} project={project}></ProjectCard>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

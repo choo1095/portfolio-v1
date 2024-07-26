@@ -9,10 +9,22 @@ interface Props {
 }
 
 const menu = [
-  strings.about_me.header,
-  strings.technical_skills.header,
-  strings.professional_projects.header,
-  strings.personal_projects.header,
+  {
+    id: "#about",
+    title: strings.about_me.header,
+  },
+  {
+    id: "#skills",
+    title: strings.technical_skills.header,
+  },
+  {
+    id: "#professional_projects",
+    title: strings.professional_projects.header,
+  },
+  {
+    id: "#personal_projects",
+    title: strings.personal_projects.header,
+  },
 ];
 
 const Nav = (props: Props) => {
@@ -21,8 +33,8 @@ const Nav = (props: Props) => {
     <nav className={clsx(props.className)}>
       <ul className="space-y-2">
         {menu.map((item, index) => (
-          <li className="relative py-1" key={item}>
-            <a className="flex items-center" href="">
+          <li className="relative py-1" key={item.id}>
+            <a className="flex items-center" href={item.id}>
               <div
                 className={clsx(
                   {
@@ -39,7 +51,7 @@ const Nav = (props: Props) => {
                   "ml-5"
                 )}
               >
-                {item}
+                {item.title}
               </span>
             </a>
           </li>

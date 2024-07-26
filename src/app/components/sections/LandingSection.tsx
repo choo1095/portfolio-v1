@@ -10,6 +10,7 @@ interface Props {
 const LandingSection = (props: Props) => {
   return (
     <section
+      id="landing"
       className={clsx(
         props.className,
         "screen_container section_padding relative z-0 h-dvh p-10 flex flex-col items-start justify-end"
@@ -17,7 +18,7 @@ const LandingSection = (props: Props) => {
     >
       <div>
         <h1>{strings.me.name}</h1>
-        <h2>{strings.me.title}</h2>
+        <h2 className="section_header">{strings.me.title}</h2>
         <p>{strings.me.description}</p>
       </div>
       <div className="w-full flex justify-center">

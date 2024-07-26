@@ -10,8 +10,8 @@ interface Props {
 
 const SkillsSection = (props: Props) => {
   return (
-    <div className={clsx(props.className, "section_padding")}>
-      <h2>{strings.technical_skills.header}</h2>
+    <section id="skills" className={clsx(props.className)}>
+      <h2 className="section_header">{strings.technical_skills.header}</h2>
       <p>{strings.technical_skills.description}</p>
       <div className="space-y-5">
         {skills.map((category) => {
@@ -29,7 +29,7 @@ const SkillsSection = (props: Props) => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

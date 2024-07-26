@@ -21,7 +21,7 @@ export default function Home() {
             <LinkedInButton></LinkedInButton>
             <Nav className="hidden md:block md:mt-20"></Nav>
           </div>
-          <div className="md:col-span-2">
+          <div className="space-y-10 md:col-span-2">
             <AboutMeSection></AboutMeSection>
             <SkillsSection></SkillsSection>
             <ProfessionalProjectsSection></ProfessionalProjectsSection>
