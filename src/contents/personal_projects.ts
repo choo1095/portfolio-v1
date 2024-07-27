@@ -1,5 +1,5 @@
-import { placeholder } from "../constants/assets";
-import { Project } from "../types/project";
+import { placeholder } from "@/constants/assets";
+import { Project } from "@/types/project";
 
 const personalProjects: Project[] = [
   {

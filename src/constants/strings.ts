@@ -12,7 +12,7 @@ const strings = {
   technical_skills: {
     header: "Technical Skills",
     description:
-      "I have experience with the following technologies. (A longer bar represents more experience.)",
+      "Here is a list of skills I've used as a developer, with frequency of usage indicated by bar length.",
   },
   professional_projects: {
     header: "Professional Projects",

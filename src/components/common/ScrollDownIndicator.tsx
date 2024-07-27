@@ -1,6 +1,6 @@
 "use client";
 
-import { scrollLottie } from "@/app/constants/assets";
+import { scrollLottie } from "@/constants/assets";
 import { DotLottiePlayer, Controls } from "@dotlottie/react-player";
 import { useGSAP } from "@gsap/react";
 

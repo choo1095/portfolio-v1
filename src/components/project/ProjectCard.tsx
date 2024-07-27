@@ -1,4 +1,4 @@
-import { Project } from "@/app/types/project";
+import { Project } from "@/types/project";
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import React from "react";
@@ -24,9 +24,9 @@ const ProjectCard = (props: Props) => {
         ></Image>
 
         <div>
-          <h3>{project.title}</h3>
+          <h3 className="mt-5 lg:mt-0">{project.title}</h3>
 
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 mt-0.5">
             {project.tags.map((tag) => (
               <span
                 key={tag}
@@ -37,7 +37,9 @@ const ProjectCard = (props: Props) => {
             ))}
           </div>
 
-          <p>{project.description}</p>
+          <p className="line-clamp-6 text-stone-600 mt-3 leading-normal lg:line-clamp-4">
+            {project.description}
+          </p>
         </div>
       </SheetTrigger>
 

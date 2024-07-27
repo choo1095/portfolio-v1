@@ -1,10 +1,10 @@
-import strings from "@/app/constants/strings";
-import personalProjects from "@/app/contents/personal_projects";
+import strings from "@/constants/strings";
+import personalProjects from "@/contents/personal_projects";
 import clsx from "clsx";
 import React, { forwardRef } from "react";
-import ProjectCard from "../project/ProjectCard";
+import ProjectCard from "@/components/project/ProjectCard";
 import { InView } from "react-intersection-observer";
-import { useNavContext } from "@/app/contexts/useNavContext";
+import { useNavContext } from "@/contexts/useNavContext";
 
 interface Props {
   id: string;

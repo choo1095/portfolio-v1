@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require("tailwindcss/plugin");
 
 const config = {
   darkMode: ["class"],
@@ -21,6 +22,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: "var(--font-raleway)",
+        "sans-serif": "var(--font-crimson-text)",
+      },
       colors: {
         primary: {
           "50": "#fef2f2",
@@ -62,7 +67,23 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+
+    plugin(function ({
+      addUtilities,
+    }: {
+      addUtilities: (utilities: Record<string, any>) => void;
+    }) {
+      const newUtilities = {
+        ".filter-primary-900": {
+          filter:
+            "invert(20%) sepia(43%) saturate(2757%) hue-rotate(339deg) brightness(85%) contrast(100%)",
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
 } satisfies Config;
 
 export default config;

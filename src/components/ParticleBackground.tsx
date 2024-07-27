@@ -1,11 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { Container, ISourceOptions } from "@tsparticles/engine";
-import { emit } from "process";
-import particlesOptions from "../../../public/particles/particles_options.json";
+import particlesOptions from "@/../../public/particles/particles_options.json";
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);

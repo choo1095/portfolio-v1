@@ -35,27 +35,27 @@
 }
 
 body {
-  
+  @apply font-sans text-stone-900;
 }
 
 h1 { 
-  @apply text-6xl font-bold;
+  @apply text-5xl font-sans-serif font-semibold md:text-6xl;
 }
 
 h2 { 
-  @apply text-2xl font-semibold uppercase text-stone-500;
+  @apply text-lg font-semibold uppercase text-stone-500;
 }
 
 h2.section_header { 
-  @apply text-2xl font-semibold py-5 uppercase text-stone-500;
+  @apply pb-5;
 }
 
 h3 { 
-  @apply text-xl font-semibold;
+  @apply text-lg font-semibold;
 }
 
 p, span { 
-  @apply text-base font-normal;
+  @apply text-base font-normal leading-relaxed;
 }
 
 @layer utilities {
@@ -68,7 +68,7 @@ p, span {
   }
 
   .section_padding { 
-    @apply py-10;
+    @apply py-14;
   }
 }
 

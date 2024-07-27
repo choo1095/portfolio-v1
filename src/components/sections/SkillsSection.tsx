@@ -1,10 +1,10 @@
 import { forwardRef } from "react";
-import skills from "@/app/contents/skills";
+import skills from "@/contents/skills";
 import clsx from "clsx";
 import SkillPill from "../common/SkillPill";
-import strings from "@/app/constants/strings";
+import strings from "@/constants/strings";
 import { InView } from "react-intersection-observer";
-import { useNavContext } from "@/app/contexts/useNavContext";
+import { useNavContext } from "@/contexts/useNavContext";
 
 interface Props {
   id: string;
@@ -44,7 +44,6 @@ const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
           );
         })}
       </div>
-      );
     </InView>
   );
 });

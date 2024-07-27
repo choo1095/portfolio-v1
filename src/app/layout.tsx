@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { crimsonText, raleway } from "./fonts";
+import clsx from "clsx";
 
 gsap.registerPlugin(useGSAP);
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clsx(raleway.variable, crimsonText.variable)}>
+        {children}
+      </body>
     </html>
   );
 }

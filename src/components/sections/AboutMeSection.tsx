@@ -1,6 +1,6 @@
-import strings from "@/app/constants/strings";
-import { useNavContext } from "@/app/contexts/useNavContext";
-import React, { forwardRef, useEffect } from "react";
+import strings from "@/constants/strings";
+import { useNavContext } from "@/contexts/useNavContext";
+import React, { forwardRef } from "react";
 import { InView } from "react-intersection-observer";
 
 interface Props {
