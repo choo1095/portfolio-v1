@@ -1,52 +1,56 @@
 "use client";
 
-import strings from "@/app/constants/strings";
+import { useNavContext } from "@/app/contexts/useNavContext";
+import { sleep } from "@/lib/utils";
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
   className?: string;
+  menu: MenuItem[];
 }
 
-const menu = [
-  {
-    id: "#about",
-    title: strings.about_me.header,
-  },
-  {
-    id: "#skills",
-    title: strings.technical_skills.header,
-  },
-  {
-    id: "#professional_projects",
-    title: strings.professional_projects.header,
-  },
-  {
-    id: "#personal_projects",
-    title: strings.personal_projects.header,
-  },
-];
-
 const Nav = (props: Props) => {
-  const active = 0;
+  const { currentSection } = useNavContext();
+
+  const [highlightedSection, setHighlightedSection] = useState("");
+
+  useEffect(() => {
+    setHighlightedSection(currentSection);
+  }, [currentSection]);
+
+  const onClickNav = async (navId: string) => {
+    await sleep(300);
+    setHighlightedSection(() => navId);
+  };
+
   return (
     <nav className={clsx(props.className)}>
-      <ul className="space-y-2">
-        {menu.map((item, index) => (
-          <li className="relative py-1" key={item.id}>
-            <a className="flex items-center" href={item.id}>
+      <ul>
+        {props.menu.map((item) => (
+          <li className="relative" key={item.id}>
+            <a
+              className="group/nav flex items-center py-3"
+              href={`#${item.id}`}
+              onClick={() => onClickNav(item.id)}
+            >
               <div
                 className={clsx(
                   {
-                    "bg-primary-900": index === active,
+                    "bg-primary-900": highlightedSection === item.id,
                   },
-                  "w-1 absolute top-0 left-0 bottom-0"
+                  "w-1 absolute top-2 left-0 bottom-2"
                 )}
               ></div>
               <span
                 className={clsx(
                   {
-                    "text-primary-900 font-medium": index === active,
+                    "text-primary-900 font-medium":
+                      highlightedSection === item.id,
+                  },
+                  {
+                    "text-stone-600 group-hover/nav:text-primary-900":
+                      highlightedSection !== item.id,
                   },
                   "ml-5"
                 )}

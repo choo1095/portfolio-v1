@@ -1,16 +1,31 @@
+import { forwardRef } from "react";
 import skills from "@/app/contents/skills";
 import clsx from "clsx";
-import React from "react";
 import SkillPill from "../common/SkillPill";
 import strings from "@/app/constants/strings";
+import { InView } from "react-intersection-observer";
+import { useNavContext } from "@/app/contexts/useNavContext";
 
 interface Props {
+  id: string;
   className?: string;
 }
 
-const SkillsSection = (props: Props) => {
+const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
+  const { setCurrentSection } = useNavContext();
+
   return (
-    <section id="skills" className={clsx(props.className)}>
+    <InView
+      as="section"
+      id={props.id}
+      className={clsx(props.className)}
+      rootMargin="0% 0% -100% 0%"
+      onChange={(inView) => {
+        if (inView) {
+          setCurrentSection(props.id);
+        }
+      }}
+    >
       <h2 className="section_header">{strings.technical_skills.header}</h2>
       <p>{strings.technical_skills.description}</p>
       <div className="space-y-5">
@@ -29,8 +44,11 @@ const SkillsSection = (props: Props) => {
           );
         })}
       </div>
-    </section>
+      );
+    </InView>
   );
-};
+});
+
+SkillsSection.displayName = "SkillsSection";
 
 export default SkillsSection;

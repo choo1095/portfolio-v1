@@ -21,7 +21,7 @@ const ParticleBackground = () => {
   }, []);
 
   const particlesLoaded = async (container: Container | undefined) => {
-    console.log(container);
+    // console.log(container);
   };
 
   if (init) {
