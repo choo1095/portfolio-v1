@@ -14,6 +14,11 @@ import Footer from "@/components/layout/Footer";
 import ParticleBackground from "@/components/ParticleBackground";
 import clsx from "clsx";
 import { useState } from "react";
+import {
+  InitializationProvider,
+  useInitializationContext,
+} from "@/contexts/useInitializationContext";
+import Loader from "@/components/layout/Loader";
 
 const menu: MenuItem[] = [
   {
@@ -34,12 +39,14 @@ const menu: MenuItem[] = [
   },
 ];
 
-export default function Home() {
-  const [showContents, setShowContents] = useState(true);
+const HomeContents = () => {
+  const { initialized } = useInitializationContext();
+  const [showContents, setShowContents] = useState(false);
 
   return (
     <>
-      <main>
+      {/* Page contents */}
+      <main className={clsx(initialized ? "opacity-100" : "opacity-0")}>
         <LandingSection
           className={clsx({
             hidden: showContents,
@@ -72,7 +79,21 @@ export default function Home() {
           </div>
         </NavProvider>
       </main>
-      <ParticleBackground></ParticleBackground>
+      {/* Background */}
+      <ParticleBackground
+        className={clsx(initialized ? "opacity-100" : "opacity-0")}
+      ></ParticleBackground>
+
+      {/* Full-page loader (if assets not initialized yet) */}
+      <Loader className={clsx(initialized ? "hidden" : "block")}></Loader>
     </>
+  );
+};
+
+export default function Home() {
+  return (
+    <InitializationProvider>
+      <HomeContents></HomeContents>
+    </InitializationProvider>
   );
 }

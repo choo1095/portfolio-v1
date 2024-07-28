@@ -5,9 +5,16 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { Container, ISourceOptions } from "@tsparticles/engine";
 import particlesOptions from "@/../../public/particles/particles_options.json";
+import { useInitializationContext } from "@/contexts/useInitializationContext";
+import clsx from "clsx";
 
-const ParticleBackground = () => {
+interface Props {
+  className?: string;
+}
+
+const ParticleBackground = (props: Props) => {
   const [init, setInit] = useState(false);
+  const { setBackgroundLoaded } = useInitializationContext();
   const options: ISourceOptions = JSON.parse(JSON.stringify(particlesOptions)); // Parse JSON to ISourceOptions
 
   // this should be run only once per application lifetime
@@ -19,16 +26,21 @@ const ParticleBackground = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container: Container | undefined) => {
-    // console.log(container);
+  const particlesLoaded = async () => {
+    setBackgroundLoaded(true);
   };
 
   if (init) {
     return (
       <>
-        <div className="fixed top-0 left-0 -z-10 h-dvh w-dvw backdrop-blur-sm"></div>
+        <div
+          className={clsx(
+            props.className,
+            "fixed top-0 left-0 -z-10 h-dvh w-dvw backdrop-blur-sm"
+          )}
+        ></div>
         <Particles
-          className="relative -z-20"
+          className={clsx(props.className, "relative -z-20")}
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={options}

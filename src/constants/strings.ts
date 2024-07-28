@@ -29,6 +29,7 @@ const strings = {
       url: "https://www.linkedin.com/in/en-ni-choo",
     },
   },
+  loading: "Loading",
 };
 
 export default strings;
