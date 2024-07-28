@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ScrollDownIndicator from "@/components/common/ScrollDownIndicator";
 import strings from "@/constants/strings";
 import clsx from "clsx";
 import Me from "../me/Me";
 import useScroll, { ScrollDirection } from "../hooks/useScroll";
+import { sleep } from "@/lib/utils";
 
 interface Props {
   className?: string;
@@ -13,11 +14,24 @@ interface Props {
 const LandingSection = (props: Props) => {
   const { scrollDirection } = useScroll();
 
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   useEffect(() => {
-    if (scrollDirection === ScrollDirection.DOWN) {
-      props.onToggleHide();
+    if (isTransitioning) {
+      return;
     }
-  }, [scrollDirection]);
+
+    const toggleHide = async () => {
+      setIsTransitioning(true);
+      await sleep(3000);
+      props.onToggleHide();
+      setIsTransitioning(false);
+    };
+
+    if (scrollDirection === ScrollDirection.DOWN) {
+      toggleHide();
+    }
+  }, [scrollDirection, isTransitioning, props]);
 
   return (
     <section

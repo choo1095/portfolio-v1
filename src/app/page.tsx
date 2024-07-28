@@ -48,26 +48,22 @@ const HomeContents = () => {
     <>
       {/* Page contents */}
       <main className={clsx(initialized ? "opacity-100" : "opacity-0")}>
-        <LandingSection
-          className={clsx({
-            hidden: showContents,
-          })}
-          onToggleHide={() => setShowContents(true)}
-        ></LandingSection>
-
-        <NavProvider>
-          <div
-            className={clsx(
-              showContents ? "grid" : "hidden",
-              "screen_container section_padding relative md:grid-cols-3 md:gap-20"
-            )}
-          >
+        {!showContents ? (
+          <LandingSection
+            className={clsx({
+              hidden: showContents,
+            })}
+            onToggleHide={() => setShowContents(true)}
+          ></LandingSection>
+        ) : (
+          <NavProvider>
             <ContentSection
               menu={menu}
               onToggleHide={() => setShowContents(false)}
+              className={clsx({ hidden: !showContents })}
             ></ContentSection>
-          </div>
-        </NavProvider>
+          </NavProvider>
+        )}
       </main>
       {/* Background */}
       <ParticleBackground

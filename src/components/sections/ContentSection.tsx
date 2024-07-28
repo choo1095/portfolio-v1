@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Me from "../me/Me";
 import LinkedInButton from "../socials/LinkedInButton";
 import Nav from "../layout/Nav";
@@ -8,8 +8,11 @@ import ProfessionalProjectsSection from "./content/ProfessionalProjectsSection";
 import PersonalProjectsSection from "./content/PersonalProjectsSection";
 import Footer from "../layout/Footer";
 import useScroll, { ScrollDirection } from "../hooks/useScroll";
+import { sleep } from "@/lib/utils";
+import clsx from "clsx";
 
 interface Props {
+  className?: string;
   menu: MenuItem[];
   onToggleHide: () => void;
 }
@@ -18,14 +21,33 @@ const ContentSection = (props: Props) => {
   const { menu } = props;
   const { scrollDirection, scrollY } = useScroll();
 
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   useEffect(() => {
-    if (scrollDirection === ScrollDirection.UP && scrollY === 0) {
-      props.onToggleHide();
+    if (isTransitioning) {
+      return;
     }
-  }, [scrollDirection, scrollY]);
+
+    const toggleHide = async () => {
+      setIsTransitioning(true);
+      await sleep(3000);
+      props.onToggleHide();
+      setIsTransitioning(false);
+    };
+
+    if (scrollDirection === ScrollDirection.UP && scrollY === 0) {
+      toggleHide();
+    }
+  }, [scrollDirection, scrollY, props, isTransitioning]);
 
   return (
-    <>
+    <div
+      className={clsx(
+        props.className,
+        { "h-dvh overflow-clip": isTransitioning }, // to prevent scrolling
+        "screen_container grid section_padding relative md:grid-cols-3 md:gap-20"
+      )}
+    >
       <div className="h-fit md:col-span-1 md:sticky md:top-14">
         <Me></Me>
         <LinkedInButton className="mt-6"></LinkedInButton>
@@ -40,7 +62,7 @@ const ContentSection = (props: Props) => {
         <PersonalProjectsSection id={menu[3].id}></PersonalProjectsSection>
         <Footer></Footer>
       </div>
-    </>
+    </div>
   );
 };
 
