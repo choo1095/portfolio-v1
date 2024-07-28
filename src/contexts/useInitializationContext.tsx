@@ -16,6 +16,8 @@ interface InitializationContextType {
   setScrollLottieLoaded: React.Dispatch<React.SetStateAction<boolean>>;
   backgroundLoaded: boolean;
   setBackgroundLoaded: React.Dispatch<React.SetStateAction<boolean>>;
+  loaderComplete: boolean;
+  setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const InitializationContext = createContext<
@@ -43,12 +45,13 @@ export function InitializationProvider({
 
   const [scrollLottieLoaded, setScrollLottieLoaded] = useState(false);
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
+  const [loaderComplete, setLoaderComplete] = useState(false);
 
   useEffect(() => {
-    if (scrollLottieLoaded && backgroundLoaded) {
-      // setInitialized(true);
+    if (scrollLottieLoaded && backgroundLoaded && loaderComplete) {
+      setInitialized(true);
     }
-  }, [scrollLottieLoaded, backgroundLoaded]);
+  }, [scrollLottieLoaded, backgroundLoaded, loaderComplete]);
 
   const value = {
     initialized,
@@ -57,6 +60,8 @@ export function InitializationProvider({
     setScrollLottieLoaded,
     backgroundLoaded,
     setBackgroundLoaded,
+    loaderComplete,
+    setLoaderComplete,
   };
 
   return (

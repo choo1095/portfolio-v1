@@ -3,13 +3,18 @@
 import { scrollLottie } from "@/constants/assets";
 import { useInitializationContext } from "@/contexts/useInitializationContext";
 import { DotLottiePlayer } from "@dotlottie/react-player";
+import clsx from "clsx";
 
-const ScrollDownIndicator = () => {
+interface Props {
+  className?: string;
+}
+
+const ScrollDownIndicator = (props: Props) => {
   const { setScrollLottieLoaded } = useInitializationContext();
 
   return (
     <DotLottiePlayer
-      className="w-10 animate-slow-bounce md:w-14"
+      className={clsx(props.className, "w-8 animate-slow-bounce md:w-10")}
       src={scrollLottie}
       autoplay
       loop

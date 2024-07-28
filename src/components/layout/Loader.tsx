@@ -2,13 +2,17 @@ import strings from "@/constants/strings";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import { animate, motion } from "framer-motion";
+import { useInitializationContext } from "@/contexts/useInitializationContext";
 
 interface Props {
   className?: string;
 }
 
-const DURATION_SECONDS = 1.5;
-const EASE = "easeIn";
+const LOADER_DURATION_SECONDS = 1.5;
+const NUMBER_DURATION_SECONDS = LOADER_DURATION_SECONDS / 4;
+const COMPLETION_DELAY_SECONDS = 0.8;
+
+const LOADER_EASE = "easeIn";
 
 const loaderTextClass = "text-2xl font-sans-serif font-semibold md:text-3xl";
 const percentageTextClass = "text-lg font-sans font-light md:text-xl";
@@ -18,8 +22,8 @@ const LoaderPercentage = () => {
 
   useEffect(() => {
     const updateNumber = animate(0, 100, {
-      duration: DURATION_SECONDS,
-      ease: EASE,
+      duration: LOADER_DURATION_SECONDS,
+      ease: LOADER_EASE,
       onUpdate: (latest: number) => setNumber(latest.toFixed(0)),
     });
 
@@ -43,9 +47,9 @@ const LoaderPercentage = () => {
         initial={{ width: "0px" }}
         animate={{ width: "min-content" }}
         transition={{
-          duration: DURATION_SECONDS / 4,
+          duration: NUMBER_DURATION_SECONDS,
           ease: "easeOut",
-          delay: DURATION_SECONDS,
+          delay: LOADER_DURATION_SECONDS,
         }}
       >
         ...100%
@@ -55,6 +59,19 @@ const LoaderPercentage = () => {
 };
 
 const Loader = (props: Props) => {
+  const { setLoaderComplete } = useInitializationContext();
+
+  useEffect(() => {
+    const timeoutDuration =
+      LOADER_DURATION_SECONDS +
+      NUMBER_DURATION_SECONDS +
+      COMPLETION_DELAY_SECONDS;
+
+    setTimeout(() => {
+      setLoaderComplete(true);
+    }, timeoutDuration * 1000);
+  }, []);
+
   return (
     <div
       className={clsx(
@@ -75,8 +92,8 @@ const Loader = (props: Props) => {
           initial={{ width: "0%" }}
           animate={{ width: "min-content" }}
           transition={{
-            duration: DURATION_SECONDS,
-            ease: EASE,
+            duration: LOADER_DURATION_SECONDS,
+            ease: LOADER_EASE,
           }}
           className={clsx(
             loaderTextClass,

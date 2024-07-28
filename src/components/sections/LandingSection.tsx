@@ -2,6 +2,7 @@ import React from "react";
 import ScrollDownIndicator from "@/components/common/ScrollDownIndicator";
 import strings from "@/constants/strings";
 import clsx from "clsx";
+import Me from "../me/Me";
 
 interface Props {
   className?: string;
@@ -13,16 +14,17 @@ const LandingSection = (props: Props) => {
       id="landing"
       className={clsx(
         props.className,
-        "screen_container section_padding relative z-0 h-dvh p-10 flex flex-col items-start justify-end"
+        "screen_container pt-14 relative z-0 h-dvh p-10 flex flex-col items-start justify-end"
       )}
     >
-      <div className="-m-10 p-10 backdrop-blur-xl">
+      {/* <div className="backdrop-blur-xl">
         <h1>{strings.me.name}</h1>
         <h2 className="section_header">{strings.me.title}</h2>
         <p>{strings.me.description}</p>
-      </div>
+      </div> */}
+      <Me></Me>
       <div className="w-full flex justify-center">
-        <ScrollDownIndicator></ScrollDownIndicator>
+        <ScrollDownIndicator className="mt-10"></ScrollDownIndicator>
       </div>
     </section>
   );
