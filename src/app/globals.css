@@ -35,7 +35,7 @@
 }
 
 body {
-  @apply font-sans text-stone-900;
+  @apply font-sans text-stone-700;
 }
 
 h1 { 

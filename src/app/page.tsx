@@ -12,6 +12,8 @@ import ProfessionalProjectsSection from "@/components/sections/ProfessionalProje
 import PersonalProjectsSection from "@/components/sections/PersonalProjectsSection";
 import Footer from "@/components/layout/Footer";
 import ParticleBackground from "@/components/ParticleBackground";
+import clsx from "clsx";
+import { useState } from "react";
 
 const menu: MenuItem[] = [
   {
@@ -33,13 +35,24 @@ const menu: MenuItem[] = [
 ];
 
 export default function Home() {
+  const [showContents, setShowContents] = useState(true);
+
   return (
     <>
       <main>
-        <LandingSection></LandingSection>
+        <LandingSection
+          className={clsx({
+            hidden: showContents,
+          })}
+        ></LandingSection>
 
         <NavProvider>
-          <div className="screen_container section_padding relative grid md:grid-cols-3 md:gap-20">
+          <div
+            className={clsx(
+              showContents ? "grid" : "hidden",
+              "screen_container section_padding relative md:grid-cols-3 md:gap-20"
+            )}
+          >
             <div className="h-fit md:col-span-1 md:sticky md:top-14">
               <Me></Me>
               <LinkedInButton className="mt-6"></LinkedInButton>

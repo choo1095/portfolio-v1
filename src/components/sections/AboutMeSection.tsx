@@ -23,7 +23,11 @@ const AboutMeSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
       }}
     >
       <h2 className="section_header">{strings.about_me.header}</h2>
-      <p>{strings.about_me.contents}</p>
+      <div className="space-y-4">
+        {strings.about_me.contents.map((content) => (
+          <p key={content}>{content}</p>
+        ))}
+      </div>
     </InView>
   );
 });

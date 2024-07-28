@@ -5,11 +5,24 @@ const skills: SkillCategory[] = [
     title: "Mobile",
     skills: [
       {
-        title: "Flutter",
+        title: "Flutter / Dart",
         percentage: 100,
       },
       {
-        title: "Dart",
+        title: "Swift",
+        percentage: 10,
+      },
+    ],
+  },
+  {
+    title: "Mobile App Deployment",
+    skills: [
+      {
+        title: "Play Store",
+        percentage: 100,
+      },
+      {
+        title: "App Store",
         percentage: 100,
       },
       {
@@ -17,8 +30,8 @@ const skills: SkillCategory[] = [
         percentage: 30,
       },
       {
-        title: "Swift",
-        percentage: 10,
+        title: "Firebase App Distribution",
+        percentage: 30,
       },
     ],
   },
@@ -30,7 +43,7 @@ const skills: SkillCategory[] = [
         percentage: 100,
       },
       {
-        title: "CSS/SCSS",
+        title: "CSS / SCSS",
         percentage: 100,
       },
       {
@@ -38,11 +51,11 @@ const skills: SkillCategory[] = [
         percentage: 100,
       },
       {
-        title: "Nuxt.js/Vue.js",
+        title: "Nuxt.js / Vue.js",
         percentage: 100,
       },
       {
-        title: "Next.js/React.js",
+        title: "Next.js / React.js",
         percentage: 100,
       },
       {
@@ -114,23 +127,6 @@ const skills: SkillCategory[] = [
       {
         title: "Digital Ocean",
         percentage: 100,
-      },
-    ],
-  },
-  {
-    title: "Mobile App Deployment",
-    skills: [
-      {
-        title: "Play Store",
-        percentage: 100,
-      },
-      {
-        title: "App Store",
-        percentage: 100,
-      },
-      {
-        title: "Firebase App Distribution",
-        percentage: 30,
       },
     ],
   },

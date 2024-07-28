@@ -17,6 +17,7 @@ const LinkedInButton = (props: Props) => {
   return (
     <a
       href={strings.socials.linkedin.url}
+      target="_blank"
       className={clsx(
         props.className,
         "group/linkedin flex items-center gap-2 w-fit hover:text-primary-900"
