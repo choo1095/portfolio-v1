@@ -42,7 +42,7 @@ const LoaderPercentage = () => {
       <motion.span
         className={clsx(
           percentageTextClass,
-          "absolute left-0 text-primary-800 text-opacity-50 overflow-clip"
+          "absolute left-0 text-primary-900 text-opacity-50 overflow-clip"
         )}
         initial={{ width: "0px" }}
         animate={{ width: "min-content" }}
@@ -97,7 +97,7 @@ const Loader = (props: Props) => {
           }}
           className={clsx(
             loaderTextClass,
-            "absolute left-0 bottom-0 text-primary-800 overflow-clip"
+            "absolute left-0 bottom-0 text-primary-900 overflow-clip"
           )}
         >
           {strings.loading}

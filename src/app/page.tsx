@@ -6,10 +6,10 @@ import LandingSection from "@/components/sections/LandingSection";
 import Me from "@/components/me/Me";
 import LinkedInButton from "@/components/socials/LinkedInButton";
 import Nav from "@/components/layout/Nav";
-import AboutMeSection from "@/components/sections/AboutMeSection";
-import SkillsSection from "@/components/sections/SkillsSection";
-import ProfessionalProjectsSection from "@/components/sections/ProfessionalProjectsSection";
-import PersonalProjectsSection from "@/components/sections/PersonalProjectsSection";
+import AboutMeSection from "@/components/sections/content/AboutMeSection";
+import SkillsSection from "@/components/sections/content/SkillsSection";
+import ProfessionalProjectsSection from "@/components/sections/content/ProfessionalProjectsSection";
+import PersonalProjectsSection from "@/components/sections/content/PersonalProjectsSection";
 import Footer from "@/components/layout/Footer";
 import ParticleBackground from "@/components/ParticleBackground";
 import clsx from "clsx";
@@ -19,6 +19,7 @@ import {
   useInitializationContext,
 } from "@/contexts/useInitializationContext";
 import Loader from "@/components/layout/Loader";
+import ContentSection from "@/components/sections/ContentSection";
 
 const menu: MenuItem[] = [
   {
@@ -51,6 +52,7 @@ const HomeContents = () => {
           className={clsx({
             hidden: showContents,
           })}
+          onToggleHide={() => setShowContents(true)}
         ></LandingSection>
 
         <NavProvider>
@@ -60,22 +62,10 @@ const HomeContents = () => {
               "screen_container section_padding relative md:grid-cols-3 md:gap-20"
             )}
           >
-            <div className="h-fit md:col-span-1 md:sticky md:top-14">
-              <Me></Me>
-              <LinkedInButton className="mt-6"></LinkedInButton>
-              <Nav className="hidden md:block md:mt-16" menu={menu}></Nav>
-            </div>
-            <div className="mt-10 space-y-10 md:col-span-2 md:mt-0 md:space-y-16">
-              <AboutMeSection id={menu[0].id}></AboutMeSection>
-              <SkillsSection id={menu[1].id}></SkillsSection>
-              <ProfessionalProjectsSection
-                id={menu[2].id}
-              ></ProfessionalProjectsSection>
-              <PersonalProjectsSection
-                id={menu[3].id}
-              ></PersonalProjectsSection>
-              <Footer></Footer>
-            </div>
+            <ContentSection
+              menu={menu}
+              onToggleHide={() => setShowContents(false)}
+            ></ContentSection>
           </div>
         </NavProvider>
       </main>

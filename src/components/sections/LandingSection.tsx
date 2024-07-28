@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ScrollDownIndicator from "@/components/common/ScrollDownIndicator";
 import strings from "@/constants/strings";
 import clsx from "clsx";
 import Me from "../me/Me";
+import useScroll, { ScrollDirection } from "../hooks/useScroll";
 
 interface Props {
   className?: string;
+  onToggleHide: () => void;
 }
 
 const LandingSection = (props: Props) => {
+  const { scrollDirection } = useScroll();
+
+  useEffect(() => {
+    if (scrollDirection === ScrollDirection.DOWN) {
+      props.onToggleHide();
+    }
+  }, [scrollDirection]);
+
   return (
     <section
       id="landing"

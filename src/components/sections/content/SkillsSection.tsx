@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import skills from "@/contents/skills";
 import clsx from "clsx";
-import SkillPill from "../common/SkillPill";
+import SkillPill from "../../common/SkillPill";
 import strings from "@/constants/strings";
 import { InView } from "react-intersection-observer";
 import { useNavContext } from "@/contexts/useNavContext";
