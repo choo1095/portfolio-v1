@@ -12,7 +12,7 @@ const SkillPill = (props: Props) => {
     <div
       className={clsx(
         props.className,
-        "px-3 py-0.5 border-primary-800 border bg-primary-800 bg-opacity-10 rounded-md relative w-fit text-primary-800 overflow-clip"
+        "px-3 py-0.5 border-primary-800 border bg-primary-800/10 rounded-md relative w-fit text-primary-800 overflow-clip"
       )}
     >
       <span>{props.children}</span>

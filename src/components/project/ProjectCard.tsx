@@ -14,7 +14,7 @@ const ProjectCard = (props: Props) => {
   return (
     <Sheet>
       {/* Project Card Button */}
-      <SheetTrigger className="-m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500 hover:bg-opacity-5 lg:flex lg:gap-5">
+      <SheetTrigger className="-m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 lg:flex lg:gap-5">
         <Image
           className="w-full lg:w-64"
           src={project.thumbnail}
