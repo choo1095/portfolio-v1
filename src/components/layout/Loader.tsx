@@ -8,14 +8,12 @@ interface Props {
   className?: string;
 }
 
-const LOADER_DURATION_SECONDS = 1.5;
-
-const LOADER_EASE = "easeIn";
+const LOADER_DURATION_SECONDS = 2;
 
 const loaderTextClass = "text-2xl font-sans-serif font-semibold md:text-3xl";
 const percentageTextClass = "text-lg font-sans font-light md:text-xl";
 
-const initialFadeClass = "opacity-0 translate-y-full";
+const initialFadeClass = "opacity-0 translate-y-1/2";
 
 const useLoaderAnimation = () => {
   const [scope, animate] = useAnimate();
@@ -29,12 +27,16 @@ const useLoaderAnimation = () => {
         [
           ".loading_background div",
           { transform: "translateY(0)", opacity: 1 },
-          { delay: stagger(0.07) },
+          { delay: stagger(0.07), ease: "easeInOut" },
         ],
         [
           ".loading_foreground",
           { width: "100%", overflow: "clip" },
-          { duration: LOADER_DURATION_SECONDS, delay: stagger(0.8) },
+          {
+            duration: LOADER_DURATION_SECONDS,
+            delay: stagger(0.8),
+            ease: [0, 0.43, 0.67, 0.9],
+          },
         ],
       ]);
 
@@ -48,8 +50,8 @@ const useLoaderAnimation = () => {
       await animate([
         [
           ".loading_foreground div",
-          { transform: "translateY(-120%)", opacity: 0 },
-          { delay: stagger(0.05) },
+          { transform: "translateY(-50%)", opacity: 0 },
+          { delay: stagger(0.05), ease: "easeInOut" },
         ],
       ]);
 
@@ -70,7 +72,7 @@ const LoaderPercentage = () => {
   useEffect(() => {
     const updateNumber = animate(0, 100, {
       duration: LOADER_DURATION_SECONDS,
-      ease: LOADER_EASE,
+      ease: "easeInOut",
       delay: 2,
       onUpdate: (latest: number) => setNumber(latest.toFixed(0)),
     });

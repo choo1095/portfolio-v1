@@ -12,10 +12,6 @@ import React, {
 interface InitializationContextType {
   initialized: boolean;
   setInitialized: React.Dispatch<React.SetStateAction<boolean>>;
-  scrollLottieLoaded: boolean;
-  setScrollLottieLoaded: React.Dispatch<React.SetStateAction<boolean>>;
-  backgroundLoaded: boolean;
-  setBackgroundLoaded: React.Dispatch<React.SetStateAction<boolean>>;
   loaderComplete: boolean;
   setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -43,23 +39,21 @@ export function InitializationProvider({
 }: InitializationProviderProps): JSX.Element {
   const [initialized, setInitialized] = useState<boolean>(false);
 
-  const [scrollLottieLoaded, setScrollLottieLoaded] = useState(false);
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [loaderComplete, setLoaderComplete] = useState(false);
 
   useEffect(() => {
-    if (scrollLottieLoaded && backgroundLoaded && loaderComplete) {
+    if (loaderComplete) {
       setInitialized(true);
     }
-  }, [scrollLottieLoaded, backgroundLoaded, loaderComplete]);
+  }, [loaderComplete]);
+
+  useEffect(() => {
+    console.log(initialized);
+  }, [initialized]);
 
   const value = {
     initialized,
     setInitialized,
-    scrollLottieLoaded,
-    setScrollLottieLoaded,
-    backgroundLoaded,
-    setBackgroundLoaded,
     loaderComplete,
     setLoaderComplete,
   };
