@@ -30,6 +30,7 @@ const strings = {
     },
   },
   loading: "Loading",
+  loading_message: "I make mobile apps and websites.",
 };
 
 export default strings;

@@ -1,5 +1,6 @@
 "use client";
 
+import { sleep } from "@/lib/utils";
 import React, {
   createContext,
   useContext,
@@ -41,15 +42,21 @@ export function InitializationProvider({
 
   const [loaderComplete, setLoaderComplete] = useState(false);
 
-  useEffect(() => {
-    if (loaderComplete) {
-      setInitialized(true);
-    }
-  }, [loaderComplete]);
+  // useEffect(() => {
+  //   sleep(2600).then(() => {
+  //     setInitialized(true);
+  //   });
+  // }, [loaderComplete]);
 
-  useEffect(() => {
-    console.log(initialized);
-  }, [initialized]);
+  // useEffect(() => {
+  //   if (loaderComplete) {
+  //     setInitialized(true);
+  //   }
+  // }, [loaderComplete]);
+
+  // useEffect(() => {
+  //   console.log(initialized);
+  // }, [initialized]);
 
   const value = {
     initialized,
