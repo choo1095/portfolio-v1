@@ -42,21 +42,11 @@ export function InitializationProvider({
 
   const [loaderComplete, setLoaderComplete] = useState(false);
 
-  // useEffect(() => {
-  //   sleep(2600).then(() => {
-  //     setInitialized(true);
-  //   });
-  // }, [loaderComplete]);
-
-  // useEffect(() => {
-  //   if (loaderComplete) {
-  //     setInitialized(true);
-  //   }
-  // }, [loaderComplete]);
-
-  // useEffect(() => {
-  //   console.log(initialized);
-  // }, [initialized]);
+  useEffect(() => {
+    if (loaderComplete) {
+      setInitialized(true);
+    }
+  }, [loaderComplete]);
 
   const value = {
     initialized,
