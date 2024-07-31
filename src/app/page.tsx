@@ -3,8 +3,6 @@
 import { NavProvider } from "@/contexts/useNavContext";
 import strings from "@/constants/strings";
 import ParticleBackground from "@/components/ParticleBackground";
-import clsx from "clsx";
-import { useState } from "react";
 import {
   InitializationProvider,
   useInitializationContext,
@@ -34,17 +32,14 @@ const menu: MenuItem[] = [
 const HomeContents = () => {
   const { initialized } = useInitializationContext();
 
-  return (
-    <>
-      <main className={clsx(initialized ? "block" : "hidden")}>
-        <NavProvider>
-          <ContentSection menu={menu}></ContentSection>
-        </NavProvider>
-      </main>
-
-      {/* Full-page loader (if assets not initialized yet) */}
-      <Loader className={clsx(initialized ? "hidden" : "block")}></Loader>
-    </>
+  return initialized ? (
+    <main>
+      <NavProvider>
+        <ContentSection menu={menu}></ContentSection>
+      </NavProvider>
+    </main>
+  ) : (
+    <Loader></Loader>
   );
 };
 

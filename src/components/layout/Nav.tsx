@@ -3,7 +3,8 @@
 import { useNavContext } from "@/contexts/useNavContext";
 import { sleep } from "@/lib/utils";
 import clsx from "clsx";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   className?: string;
@@ -34,18 +35,28 @@ const Nav = (props: Props) => {
               href={`#${item.id}`}
               onClick={() => onClickNav(item.id)}
             >
-              <div
+              <motion.div
                 className={clsx(
                   {
-                    "bg-primary-900 w-1": highlightedSection === item.id,
+                    "bg-primary-900": highlightedSection === item.id,
                   },
                   "absolute top-2 left-0 bottom-2"
                 )}
-              ></div>
-              <span
+                animate={
+                  highlightedSection === item.id
+                    ? { opacity: 1, width: 4 }
+                    : { opacity: 0, width: 1 }
+                }
+                transition={{
+                  delay: 0.03,
+                  ease: "backIn",
+                }}
+                exit={{ opacity: 0, width: 0 }}
+              ></motion.div>
+              <motion.span
                 className={clsx(
                   {
-                    "text-primary-900 font-medium ml-5":
+                    "text-primary-900 font-medium":
                       highlightedSection === item.id,
                   },
                   {
@@ -53,9 +64,21 @@ const Nav = (props: Props) => {
                       highlightedSection !== item.id,
                   }
                 )}
+                animate={
+                  highlightedSection === item.id
+                    ? {
+                        transform: "translateX(20px)",
+                        fontWeight: "500",
+                      }
+                    : { transform: "translateX(0)", fontWeight: "400" }
+                }
+                transition={{
+                  delay: 0.08,
+                  ease: "easeOut",
+                }}
               >
                 {item.title}
-              </span>
+              </motion.span>
             </a>
           </li>
         ))}

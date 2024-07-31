@@ -15,6 +15,7 @@ interface InitializationContextType {
   setInitialized: React.Dispatch<React.SetStateAction<boolean>>;
   loaderComplete: boolean;
   setLoaderComplete: React.Dispatch<React.SetStateAction<boolean>>;
+  oneSecondAfterInitialized: boolean;
 }
 
 const InitializationContext = createContext<
@@ -39,12 +40,18 @@ export function InitializationProvider({
   children,
 }: InitializationProviderProps): JSX.Element {
   const [initialized, setInitialized] = useState<boolean>(false);
+  const [oneSecondAfterInitialized, setOneSecondAfterInitialized] =
+    useState<boolean>(false);
 
   const [loaderComplete, setLoaderComplete] = useState(false);
 
   useEffect(() => {
     if (loaderComplete) {
       setInitialized(true);
+
+      sleep(1000).then(() => {
+        setOneSecondAfterInitialized(true);
+      });
     }
   }, [loaderComplete]);
 
@@ -53,6 +60,7 @@ export function InitializationProvider({
     setInitialized,
     loaderComplete,
     setLoaderComplete,
+    oneSecondAfterInitialized,
   };
 
   return (

@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface NavContextType {
   currentSection: string;
@@ -28,7 +22,7 @@ interface NavProviderProps {
 }
 
 export function NavProvider({ children }: NavProviderProps): JSX.Element {
-  const [currentSection, setCurrentSection] = useState<string>("");
+  const [currentSection, setCurrentSection] = useState<string>("about");
 
   const value = {
     currentSection,

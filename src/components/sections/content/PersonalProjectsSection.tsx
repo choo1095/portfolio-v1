@@ -5,6 +5,7 @@ import React, { forwardRef } from "react";
 import ProjectCard from "@/components/project/ProjectCard";
 import { InView } from "react-intersection-observer";
 import { useNavContext } from "@/contexts/useNavContext";
+import { useInitializationContext } from "@/contexts/useInitializationContext";
 
 interface Props {
   id: string;
@@ -14,6 +15,7 @@ interface Props {
 const PersonalProjectsSection = forwardRef<HTMLDivElement, Props>(
   (props, ref) => {
     const { setCurrentSection } = useNavContext();
+    const { oneSecondAfterInitialized } = useInitializationContext();
 
     return (
       <InView
@@ -21,6 +23,10 @@ const PersonalProjectsSection = forwardRef<HTMLDivElement, Props>(
         id={props.id}
         className={clsx(props.className)}
         onChange={(inView) => {
+          if (!oneSecondAfterInitialized) {
+            return;
+          }
+
           if (inView) {
             setCurrentSection(props.id);
           } else {
