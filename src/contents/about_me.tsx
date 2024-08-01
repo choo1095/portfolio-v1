@@ -19,7 +19,7 @@ const AboutMeContents = () => {
           link="https://www.mobius-digital.com/"
           text="Mobius Digital Systems"
         ></InlineLink>
-        , a Malaysian app development company.
+        , a Malaysian software development company.
       </p>
       <p>
         Even though I have been a mobile apps and web developer for the past
