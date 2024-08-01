@@ -4,7 +4,14 @@ import React from "react";
 interface Props {
   className?: string;
   children: React.ReactNode;
-  percentage: number;
+  /**
+   * level of skill level.
+   * - 1: confident
+   * - 2: experienced
+   * - 3: decent
+   * - 4: limited experience
+   */
+  level: 1 | 2 | 3 | 4;
 }
 
 const SkillPill = (props: Props) => {
@@ -12,7 +19,7 @@ const SkillPill = (props: Props) => {
     <div
       className={clsx(
         props.className,
-        "px-3 py-0.5 border-primary-800 border bg-primary-800/10 rounded-md relative w-fit text-primary-800 overflow-clip"
+        "px-3 py-0.5 border-primary-900 border bg-primary-900/10 rounded-md relative w-fit text-primary-900 overflow-clip"
       )}
     >
       <span>{props.children}</span>
@@ -21,7 +28,7 @@ const SkillPill = (props: Props) => {
           "w-full absolute bottom-0 left-0 h-[2.5px] bg-primary-900"
         )}
         style={{
-          width: `${props.percentage}%`,
+          width: `${100 - (props.level - 1) * 25}%`,
           backgroundColor: "var(--color-primary-900)",
         }}
       ></div>

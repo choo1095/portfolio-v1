@@ -30,6 +30,7 @@ const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
       <SectionHeader>{strings.technical_skills.header}</SectionHeader>
 
       <p>{strings.technical_skills.description}</p>
+
       <div className="space-y-5">
         {skills.map((category) => {
           return (
@@ -37,7 +38,7 @@ const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
               <p>{category.title}</p>
               <div className="flex flex-wrap gap-1">
                 {category.skills.map((skill) => (
-                  <SkillPill key={skill.title} percentage={skill.percentage}>
+                  <SkillPill key={skill.title} level={4}>
                     {skill.title}
                   </SkillPill>
                 ))}
