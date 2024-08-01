@@ -1,6 +1,8 @@
+import InlineLink from "@/components/common/InlineLink";
 import SectionHeader from "@/components/common/SectionHeader";
 import ArrowOutwardsSvg from "@/components/common/svg/ArrowOutwardsSvg";
 import strings from "@/constants/strings";
+import AboutMeContents from "@/contents/about_me";
 import { useNavContext } from "@/contexts/useNavContext";
 import React, { forwardRef } from "react";
 import { InView } from "react-intersection-observer";
@@ -12,27 +14,12 @@ interface Props {
 
 const ResumeLink = () => {
   return (
-    <blockquote className="border-l-8 border-solid border-l-primary-900/80 pl-5 py-5">
+    <blockquote className="border-l-8 border-solid border-l-primary-900/80 px-5 py-5">
       <span className="font-medium">{strings.about_me.resume.text_1}</span>
-      <span>
-        <a
-          href={strings.about_me.resume.link}
-          target="_blank"
-          className="group/resume-link text-primary-900"
-        >
-          <span className="font-medium group-hover/resume-link:font-semibold">
-            {strings.about_me.resume.text_2}
-          </span>
-          <span className="inline-block align-middle">
-            <ArrowOutwardsSvg
-              className="group-hover/resume-link:animate-outwards ml-1 mb-1"
-              color="#831c19"
-              height={20}
-              width={20}
-            ></ArrowOutwardsSvg>
-          </span>
-        </a>
-      </span>
+      <InlineLink
+        link={strings.about_me.resume.link}
+        text={strings.about_me.resume.text_2}
+      ></InlineLink>
     </blockquote>
   );
 };
@@ -53,13 +40,10 @@ const AboutMeSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
     >
       <SectionHeader>{strings.about_me.header}</SectionHeader>
 
-      <div className="space-y-4">
-        {strings.about_me.contents.map((content) => (
-          <p key={content}>{content}</p>
-        ))}
-
-        <ResumeLink></ResumeLink>
+      <div className="space-y-4 mb-8">
+        <AboutMeContents></AboutMeContents>
       </div>
+      <ResumeLink></ResumeLink>
     </InView>
   );
 });

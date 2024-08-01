@@ -14,9 +14,9 @@ const ProjectCard = (props: Props) => {
   return (
     <Sheet>
       {/* Project Card Button */}
-      <SheetTrigger className="-m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 lg:flex lg:gap-5">
+      <SheetTrigger className="-m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 sm:flex sm:gap-5">
         <Image
-          className="w-full lg:w-64"
+          className="w-full sm:w-48 md:w-56 lg:w-64"
           src={project.thumbnail}
           alt={project.slug}
           width={400}
@@ -24,7 +24,7 @@ const ProjectCard = (props: Props) => {
         ></Image>
 
         <div>
-          <h3 className="mt-5 lg:mt-0">{project.title}</h3>
+          <h3 className="mt-5 sm:mt-0">{project.title}</h3>
 
           <div className="flex flex-wrap gap-1 mt-0.5">
             {project.tags.map((tag) => (
@@ -37,7 +37,7 @@ const ProjectCard = (props: Props) => {
             ))}
           </div>
 
-          <p className="line-clamp-6 text-stone-600 mt-3 leading-normal lg:line-clamp-4">
+          <p className="line-clamp-6 text-stone-600 mt-3 leading-normal sm:line-clamp-4">
             {project.description}
           </p>
         </div>

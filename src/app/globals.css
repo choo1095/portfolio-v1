@@ -64,7 +64,7 @@ p, span {
   }
 
   .section_padding { 
-    @apply py-14;
+    @apply py-8 sm:py-10 xl:py-14;
   }
 }
 
