@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import { animate, motion, stagger, useAnimate, useSpring } from "framer-motion";
+import { animate, motion, stagger, useAnimate } from "framer-motion";
 import { useInitializationContext } from "@/contexts/useInitializationContext";
 import { sleep } from "@/lib/utils";
+import strings from "@/constants/strings";
 
 const initial = {
   opacity: 0,
@@ -65,8 +66,6 @@ const useFadeSequenceAnimation = () => {
           { at: "-0.1" },
         ],
       ]);
-
-      await sleep(300);
 
       setLoaderComplete(true);
     };
@@ -142,13 +141,11 @@ const LoaderContents = (props: Props) => {
               id="loader_message"
               className="flex gap-1.5 text-sm sm:text-base"
             >
-              {["I", "make", "mobile", "apps", "and", "websites"].map(
-                (item) => (
-                  <motion.div key={item} initial={initial}>
-                    {item}
-                  </motion.div>
-                )
-              )}
+              {strings.loading_message.split(" ").map((item) => (
+                <motion.div key={item} initial={initial}>
+                  {item}
+                </motion.div>
+              ))}
             </div>
           </div>
           <LoaderPercentage className="hidden w-16 sm:flex"></LoaderPercentage>
@@ -197,15 +194,17 @@ const LoaderContents = (props: Props) => {
 
 const Loader = (props: Props) => {
   return (
-    <div
+    <motion.div
       className={clsx(
         props.className,
         "w-dvw h-dvh fixed top-0 left-0 text-stone-700"
       )}
+      animate={{ opacity: 0 }}
+      transition={{ duration: 1.5, delay: 4.3 }}
     >
       {/* <Curtains></Curtains> */}
       <LoaderContents></LoaderContents>
-    </div>
+    </motion.div>
   );
 };
 

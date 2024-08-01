@@ -8,6 +8,7 @@ import ProfessionalProjectsSection from "./content/ProfessionalProjectsSection";
 import PersonalProjectsSection from "./content/PersonalProjectsSection";
 import Footer from "../layout/Footer";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 interface Props {
   className?: string;
@@ -18,11 +19,14 @@ const ContentSection = (props: Props) => {
   const { menu } = props;
 
   return (
-    <div
+    <motion.div
       className={clsx(
         props.className,
         "screen_container grid section_padding relative md:grid-cols-3 md:gap-20"
       )}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
     >
       <div className="h-fit md:col-span-1 md:sticky md:top-14">
         <Me></Me>
@@ -38,7 +42,7 @@ const ContentSection = (props: Props) => {
         <PersonalProjectsSection id={menu[3].id}></PersonalProjectsSection>
         <Footer></Footer>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
