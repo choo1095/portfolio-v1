@@ -1,17 +1,10 @@
-import { linkedIn } from "@/constants/assets";
 import strings from "@/constants/strings";
 import clsx from "clsx";
-import Image from "next/image";
 import React from "react";
 
 interface Props {
   className?: string;
 }
-
-const hoverFilterStyle = {
-  filter:
-    "invert(20%) sepia(43%) saturate(2757%) hue-rotate(339deg) brightness(85%) contrast(100%)",
-};
 
 const LinkedInButton = (props: Props) => {
   return (
