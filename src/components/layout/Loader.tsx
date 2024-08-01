@@ -131,7 +131,7 @@ const LoaderContents = (props: Props) => {
         <div className="sm:flex sm:items-end sm:justify-between">
           <div>
             <h1 id="loader_name" className="flex gap-1.5 text-3xl sm:text-4xl">
-              {["Choo", "En-Ni"].map((item) => (
+              {strings.me.name.split(" ").map((item) => (
                 <motion.div key={item} initial={initial}>
                   {item}
                 </motion.div>

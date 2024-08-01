@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
-import skills from "@/contents/skills";
 import clsx from "clsx";
-import SkillPill from "../../common/SkillPill";
 import strings from "@/constants/strings";
 import { InView } from "react-intersection-observer";
 import { useNavContext } from "@/contexts/useNavContext";
 import SectionHeader from "@/components/common/SectionHeader";
+import skills from "@/contents/skills";
+import SkillCategoryCard from "@/components/skill/SkillCategoryCard";
 
 interface Props {
   id: string;
@@ -31,19 +31,13 @@ const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
       <p>{strings.technical_skills.description}</p>
 
-      <div className="space-y-5">
-        {skills.map((category) => {
+      <div className="space-y-6 mt-5 sm:space-y-0">
+        {skills.map((item) => {
           return (
-            <div key={category.title}>
-              <p>{category.title}</p>
-              <div className="flex flex-wrap gap-1">
-                {category.skills.map((skill) => (
-                  <SkillPill key={skill.title} level={4}>
-                    {skill.title}
-                  </SkillPill>
-                ))}
-              </div>
-            </div>
+            <SkillCategoryCard
+              key={item.category}
+              data={item}
+            ></SkillCategoryCard>
           );
         })}
       </div>

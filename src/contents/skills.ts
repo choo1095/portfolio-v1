@@ -1,145 +1,199 @@
-import { SkillCategory } from "@/types/skill";
+import { SkillCategory } from "@/types/skillCategory";
 
 const skills: SkillCategory[] = [
   {
-    title: "Mobile",
-    skills: [
+    category: "Mobile",
+    subcategory: [
       {
-        title: "Flutter / Dart",
-        percentage: 100,
+        name: "Hybrid",
+        items: [
+          {
+            skillName: "Flutter",
+            level: 1,
+          },
+        ],
       },
       {
-        title: "Swift",
-        percentage: 10,
-      },
-    ],
-  },
-  {
-    title: "Mobile App Deployment",
-    skills: [
-      {
-        title: "Play Store",
-        percentage: 100,
-      },
-      {
-        title: "App Store",
-        percentage: 100,
-      },
-      {
-        title: "Fastlane",
-        percentage: 30,
-      },
-      {
-        title: "Firebase App Distribution",
-        percentage: 30,
+        name: "Native",
+        items: [
+          {
+            skillName: "Swift (iOS)",
+            level: 3,
+          },
+        ],
       },
     ],
   },
   {
-    title: "Frontend",
-    skills: [
+    category: "Frontend",
+    subcategory: [
       {
-        title: "HTML",
-        percentage: 100,
+        name: "The Basics",
+        items: [
+          {
+            skillName: "HTML",
+            level: 1,
+          },
+          {
+            skillName: "CSS",
+            level: 2,
+          },
+          {
+            skillName: "Javascript",
+            level: 2,
+          },
+          {
+            skillName: "Typescript",
+            level: 1,
+          },
+          {
+            skillName: "jQuery",
+            level: 3,
+          },
+        ],
       },
       {
-        title: "CSS / SCSS",
-        percentage: 100,
+        name: "Frameworks",
+        items: [
+          {
+            skillName: "Nuxt.js / Vue.js",
+            level: 1,
+          },
+          {
+            skillName: "Next.js / React.js",
+            level: 3,
+          },
+        ],
       },
       {
-        title: "TailwindCSS",
-        percentage: 100,
+        name: "CSS Frameworks",
+        items: [
+          {
+            skillName: "TailwindCSS",
+            level: 1,
+          },
+          {
+            skillName: "Bootstrap",
+            level: 3,
+          },
+        ],
       },
       {
-        title: "Nuxt.js / Vue.js",
-        percentage: 100,
+        name: "Web Animations",
+        items: [
+          {
+            skillName: "GSAP",
+            level: 2,
+          },
+          {
+            skillName: "Framer Motion",
+            level: 2,
+          },
+        ],
       },
       {
-        title: "Next.js / React.js",
-        percentage: 100,
-      },
-      {
-        title: "Typescript",
-        percentage: 100,
-      },
-      {
-        title: "Javascript",
-        percentage: 100,
-      },
-      {
-        title: "GSAP",
-        percentage: 100,
-      },
-      {
-        title: "Three.js",
-        percentage: 100,
-      },
-      {
-        title: "React Three Fiber",
-        percentage: 100,
-      },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      {
-        title: "Node.js",
-        percentage: 100,
-      },
-      {
-        title: "Laravel",
-        percentage: 100,
-      },
-      {
-        title: "Filament",
-        percentage: 100,
-      },
-      {
-        title: "MySQL",
-        percentage: 100,
-      },
-      {
-        title: "MongoDB",
-        percentage: 100,
-      },
-      {
-        title: "Cloud Firestore",
-        percentage: 100,
-      },
-    ],
-  },
-  {
-    title: "Cloud Services",
-    skills: [
-      {
-        title: "Firebase",
-        percentage: 100,
-      },
-      {
-        title: "AWS",
-        percentage: 100,
-      },
-      {
-        title: "Vercel",
-        percentage: 100,
-      },
-      {
-        title: "Digital Ocean",
-        percentage: 100,
+        name: "3D Web Animations",
+        items: [
+          {
+            skillName: "Three.js",
+            level: 3,
+          },
+          {
+            skillName: "React Three Fiber (R3F)",
+            level: 4,
+          },
+        ],
       },
     ],
   },
   {
-    title: "Design",
-    skills: [
+    category: "Backend",
+    subcategory: [
       {
-        title: "Figma",
-        percentage: 100,
+        name: "Frameworks",
+        items: [
+          {
+            skillName: "Laravel",
+            level: 2,
+          },
+          {
+            skillName: "Node.js",
+            level: 2,
+          },
+        ],
       },
       {
-        title: "Photoshop",
-        percentage: 100,
+        name: "Databases",
+        items: [
+          {
+            skillName: "MySQL",
+            level: 2,
+          },
+          {
+            skillName: "Cloud Firestore",
+            level: 2,
+          },
+          {
+            skillName: "MongoDB",
+            level: 4,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: "Misc",
+    subcategory: [
+      {
+        name: "Mobile App Deployment",
+        items: [
+          {
+            skillName: "Play Store",
+            level: 1,
+          },
+          {
+            skillName: "App Store",
+            level: 1,
+          },
+          {
+            skillName: "Fastlane",
+            level: 3,
+          },
+          {
+            skillName: "Firebase App Distribution",
+            level: 3,
+          },
+        ],
+      },
+      {
+        name: "Cloud Services",
+        items: [
+          {
+            skillName: "Digital Ocean",
+            level: 3,
+          },
+          {
+            skillName: "AWS",
+            level: 3,
+          },
+          {
+            skillName: "Vercel",
+            level: 4,
+          },
+        ],
+      },
+      {
+        name: "Design Tools",
+        items: [
+          {
+            skillName: "Figma",
+            level: 3,
+          },
+          {
+            skillName: "Photoshop",
+            level: 3,
+          },
+        ],
       },
     ],
   },
