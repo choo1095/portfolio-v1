@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 { 
-  @apply text-sm md:text-base font-medium uppercase text-stone-500/80 lg:text-lg ;
+  @apply text-sm md:text-base font-medium uppercase text-primary-900/80 lg:text-lg ;
 }
 
 h3 { 

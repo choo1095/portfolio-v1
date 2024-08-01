@@ -12,15 +12,15 @@ interface Props {
 
 const ResumeLink = () => {
   return (
-    <p>
-      <span>{strings.about_me.resume.text_1}</span>
+    <blockquote className="border-l-8 border-solid border-l-primary-900/80 pl-5 py-5">
+      <span className="font-medium">{strings.about_me.resume.text_1}</span>
       <span>
         <a
           href={strings.about_me.resume.link}
           target="_blank"
           className="group/resume-link text-primary-900"
         >
-          <span className="font-medium group-hover/resume-link:underline">
+          <span className="font-medium group-hover/resume-link:font-semibold">
             {strings.about_me.resume.text_2}
           </span>
           <span className="inline-block align-middle">
@@ -33,7 +33,7 @@ const ResumeLink = () => {
           </span>
         </a>
       </span>
-    </p>
+    </blockquote>
   );
 };
 
