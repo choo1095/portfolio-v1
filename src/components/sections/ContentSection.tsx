@@ -1,6 +1,5 @@
 import React from "react";
 import Me from "../me/Me";
-import LinkedInButton from "../socials/LinkedInButton";
 import Nav from "../layout/Nav";
 import AboutMeSection from "./content/AboutMeSection";
 import SkillsSection from "./content/SkillsSection";
@@ -9,6 +8,7 @@ import PersonalProjectsSection from "./content/PersonalProjectsSection";
 import Footer from "../layout/Footer";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import Socials from "@/contents/socials";
 
 interface Props {
   className?: string;
@@ -30,7 +30,7 @@ const ContentSection = (props: Props) => {
     >
       <div className="h-fit lg:col-span-1 lg:sticky lg:top-14">
         <Me></Me>
-        <LinkedInButton className="mt-6"></LinkedInButton>
+        <Socials className="mt-6"></Socials>
         <Nav className="hidden lg:block lg:mt-16" menu={menu}></Nav>
       </div>
       <div className="mt-14 space-y-10 lg:col-span-2 lg:mt-0 lg:space-y-16">
