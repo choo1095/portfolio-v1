@@ -12,6 +12,8 @@ const strings = {
       "I began my tech career with native iOS app development using Swift as a mobile application developer. I then transitioned to Flutter to meet the need for developing Android apps in addition to iOS. This shift allowed me to create hybrid apps for both platforms. While working with Flutter, I gradually delved into front-end development using Vue and Nuxt, expanding my experience with dynamic web design and user interfaces. This experience eventually led me to embrace full-stack development, where I now build comprehensive applications using Laravel, integrating both front-end and back-end technologies seamlessly.",
       "Throughout my journey, I've been experimenting with and exploring different programming languages, constantly broadening my technical knowledge, embracing new challenges along the way so that I can be a better version of myself every day.",
     ],
+    resume_link:
+      "If you'd like to learn more about my professional background, feel free to download a copy of my resume here!",
   },
   technical_skills: {
     header: "Technical Skills",

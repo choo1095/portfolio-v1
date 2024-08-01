@@ -22,7 +22,7 @@ const ContentSection = (props: Props) => {
     <motion.div
       className={clsx(
         props.className,
-        "screen_container grid section_padding relative md:grid-cols-3 md:gap-20"
+        "screen_container grid section_padding relative md:grid-cols-3 md:gap-10 lg:gap-20"
       )}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -33,7 +33,7 @@ const ContentSection = (props: Props) => {
         <LinkedInButton className="mt-6"></LinkedInButton>
         <Nav className="hidden md:block md:mt-16" menu={menu}></Nav>
       </div>
-      <div className="mt-10 space-y-10 md:col-span-2 md:mt-0 md:space-y-16">
+      <div className="mt-14 space-y-10 md:col-span-2 md:mt-0 md:space-y-16">
         <AboutMeSection id={menu[0].id}></AboutMeSection>
         <SkillsSection id={menu[1].id}></SkillsSection>
         <ProfessionalProjectsSection

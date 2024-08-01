@@ -1,3 +1,4 @@
+import SectionHeader from "@/components/common/SectionHeader";
 import strings from "@/constants/strings";
 import { useNavContext } from "@/contexts/useNavContext";
 import React, { forwardRef } from "react";
@@ -22,7 +23,8 @@ const AboutMeSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
         }
       }}
     >
-      <h2 className="section_header">{strings.about_me.header}</h2>
+      <SectionHeader>{strings.about_me.header}</SectionHeader>
+
       <div className="space-y-4">
         {strings.about_me.contents.map((content) => (
           <p key={content}>{content}</p>

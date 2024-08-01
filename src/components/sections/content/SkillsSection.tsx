@@ -5,6 +5,7 @@ import SkillPill from "../../common/SkillPill";
 import strings from "@/constants/strings";
 import { InView } from "react-intersection-observer";
 import { useNavContext } from "@/contexts/useNavContext";
+import SectionHeader from "@/components/common/SectionHeader";
 
 interface Props {
   id: string;
@@ -26,7 +27,8 @@ const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
         }
       }}
     >
-      <h2 className="section_header">{strings.technical_skills.header}</h2>
+      <SectionHeader>{strings.technical_skills.header}</SectionHeader>
+
       <p>{strings.technical_skills.description}</p>
       <div className="space-y-5">
         {skills.map((category) => {

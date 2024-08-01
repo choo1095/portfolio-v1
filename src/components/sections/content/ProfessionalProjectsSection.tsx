@@ -5,6 +5,7 @@ import ProjectCard from "@/components/project/ProjectCard";
 import professionalProjects from "@/contents/professional_projects";
 import { InView } from "react-intersection-observer";
 import { useNavContext } from "@/contexts/useNavContext";
+import SectionHeader from "@/components/common/SectionHeader";
 
 interface Props {
   id: string;
@@ -27,9 +28,8 @@ const ProfessionalProjectsSection = forwardRef<HTMLDivElement, Props>(
           }
         }}
       >
-        <h2 className="section_header">
-          {strings.professional_projects.header}
-        </h2>
+        <SectionHeader>{strings.professional_projects.header}</SectionHeader>
+
         <div className="space-y-3">
           {professionalProjects.map((project) => (
             <ProjectCard key={project.id} project={project}></ProjectCard>

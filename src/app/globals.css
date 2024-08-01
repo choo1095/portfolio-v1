@@ -39,15 +39,11 @@ body {
 }
 
 h1 { 
-  @apply text-4xl font-sans-serif font-semibold lg:text-6xl;
+  @apply text-4xl font-sans-serif font-semibold lg:text-5xl xl:text-6xl;
 }
 
 h2 { 
-  @apply text-lg font-medium uppercase text-stone-500/80;
-}
-
-h2.section_header { 
-  @apply pb-5;
+  @apply text-sm md:text-base font-medium uppercase text-stone-500/80 lg:text-lg ;
 }
 
 h3 { 

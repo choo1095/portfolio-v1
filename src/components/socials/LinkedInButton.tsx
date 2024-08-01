@@ -13,17 +13,17 @@ const LinkedInButton = (props: Props) => {
       target="_blank"
       className={clsx(
         props.className,
-        "group/linkedin flex items-center gap-2 w-fit hover:text-primary-900"
+        "group/linkedin flex items-center gap-1.5 w-fit hover:text-primary-900"
       )}
     >
       <svg
-        width="16"
-        height="16"
+        width="14"
+        height="14"
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        className="group-hover/linkedin:filter-primary-900"
+        className="group-hover/linkedin:filter-primary-900 mb-0.5"
       >
         <rect width="16" height="16" fill="url(#pattern0_6_146)" />
         <defs>
@@ -44,7 +44,7 @@ const LinkedInButton = (props: Props) => {
         </defs>
       </svg>
 
-      <span>{strings.socials.linkedin.title}</span>
+      <span className="text-sm">{strings.socials.linkedin.title}</span>
     </a>
   );
 };
