@@ -18,7 +18,7 @@ const SkillCategoryCard = (props: Props) => {
     >
       <h3 className="flex items-center mb-3 gap-4 sm:w-36 sm:items-start md:w-40">
         <div className="h-6 w-1 bg-stone-600/50 sm:hidden"></div>
-        <span className="text-sm font-semibold uppercase text-zinc-600/50 sm:text-base">
+        <span className="text-sm font-semibold uppercase text-zinc-600/50 sm:text-sm">
           {props.data.category}
         </span>
       </h3>

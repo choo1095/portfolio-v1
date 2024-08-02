@@ -9,7 +9,7 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Flutter",
-            level: 1,
+            level: 4,
           },
         ],
       },
@@ -18,7 +18,7 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Swift (iOS)",
-            level: 3,
+            level: 1,
           },
         ],
       },
@@ -32,11 +32,11 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "HTML",
-            level: 1,
+            level: 4,
           },
           {
             skillName: "CSS",
-            level: 2,
+            level: 4,
           },
           {
             skillName: "Javascript",
@@ -44,7 +44,7 @@ const skills: SkillCategory[] = [
           },
           {
             skillName: "Typescript",
-            level: 1,
+            level: 4,
           },
           {
             skillName: "jQuery",
@@ -57,11 +57,11 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Nuxt.js / Vue.js",
-            level: 1,
+            level: 4,
           },
           {
             skillName: "Next.js / React.js",
-            level: 3,
+            level: 2,
           },
         ],
       },
@@ -70,7 +70,7 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "TailwindCSS",
-            level: 1,
+            level: 4,
           },
           {
             skillName: "Bootstrap",
@@ -83,11 +83,11 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "GSAP",
-            level: 2,
+            level: 3,
           },
           {
             skillName: "Framer Motion",
-            level: 2,
+            level: 3,
           },
         ],
       },
@@ -96,11 +96,11 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Three.js",
-            level: 3,
+            level: 2,
           },
           {
             skillName: "React Three Fiber (R3F)",
-            level: 4,
+            level: 1,
           },
         ],
       },
@@ -114,11 +114,11 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Laravel",
-            level: 2,
+            level: 3,
           },
           {
             skillName: "Node.js",
-            level: 2,
+            level: 4,
           },
         ],
       },
@@ -127,7 +127,7 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "MySQL",
-            level: 2,
+            level: 3,
           },
           {
             skillName: "Cloud Firestore",
@@ -135,7 +135,7 @@ const skills: SkillCategory[] = [
           },
           {
             skillName: "MongoDB",
-            level: 4,
+            level: 1,
           },
         ],
       },
@@ -149,19 +149,15 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Play Store",
-            level: 1,
+            level: 4,
           },
           {
             skillName: "App Store",
-            level: 1,
+            level: 4,
           },
           {
             skillName: "Fastlane",
-            level: 3,
-          },
-          {
-            skillName: "Firebase App Distribution",
-            level: 3,
+            level: 2,
           },
         ],
       },
@@ -170,15 +166,15 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Digital Ocean",
-            level: 3,
+            level: 2,
           },
           {
             skillName: "AWS",
-            level: 3,
+            level: 2,
           },
           {
             skillName: "Vercel",
-            level: 4,
+            level: 1,
           },
         ],
       },
@@ -187,11 +183,11 @@ const skills: SkillCategory[] = [
         items: [
           {
             skillName: "Figma",
-            level: 3,
+            level: 2,
           },
           {
             skillName: "Photoshop",
-            level: 3,
+            level: 2,
           },
         ],
       },

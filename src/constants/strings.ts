@@ -17,7 +17,7 @@ const strings = {
   technical_skills: {
     header: "Technical Skills",
     description:
-      "Here's a list of my developer skills that I have used throughout my professional career, with the length of the dark red bar representing my level of experience and familiarity with each skill.",
+      "Here's a list of my developer skills that I have used throughout my professional career, with the length of the dark red bar representing the frequency of use for each skill.",
   },
   professional_projects: {
     header: "Professional Projects",
