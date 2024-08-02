@@ -1,8 +1,8 @@
 import { Project } from "@/types/project";
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
-import Image from "next/image";
 import React from "react";
 import ProjectSheet from "./ProjectSheet";
+import CommonImage from "../common/CommonImage";
 
 interface Props {
   project: Project;
@@ -14,16 +14,18 @@ const ProjectCard = (props: Props) => {
   return (
     <Sheet>
       {/* Project Card Button */}
-      <SheetTrigger className="-m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 sm:flex sm:gap-5">
-        <Image
-          className="w-full sm:w-48 md:w-56 lg:w-64"
-          src={project.thumbnail}
-          alt={project.slug}
-          width={400}
-          height={400}
-        ></Image>
+      <SheetTrigger className="group/project-card -m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 sm:grid sm:gap-5 sm:grid-cols-5">
+        <div className="overflow-clip sm:col-span-2">
+          <CommonImage
+            className="w-full group-hover/project-card:scale-110 delay-100 duration-300"
+            src={project.thumbnail}
+            alt={project.slug}
+            width={400}
+            height={240}
+          ></CommonImage>
+        </div>
 
-        <div>
+        <div className="sm:col-span-3">
           <h3 className="mt-5 sm:mt-0">{project.title}</h3>
 
           <div className="flex flex-wrap gap-1 mt-0.5">
@@ -39,6 +41,22 @@ const ProjectCard = (props: Props) => {
 
           <p className="line-clamp-6 text-stone-600 mt-3 leading-normal sm:line-clamp-4">
             {project.description}
+          </p>
+
+          <p className="flex flex-wrap mt-5">
+            {project.tools.map((tool, index) => (
+              <>
+                <span
+                  key={tool}
+                  className="text-primary-900 text-sm font-medium"
+                >
+                  #{tool}
+                </span>
+                {index < project.tools.length - 1 && (
+                  <span className="text-sm font-medium">&nbsp;</span>
+                )}
+              </>
+            ))}
           </p>
         </div>
       </SheetTrigger>

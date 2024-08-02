@@ -5,9 +5,10 @@ const professionalProjects: Project[] = [
   {
     id: "mobius_website",
     slug: "mobius_website",
-    thumbnail: placeholder,
+    thumbnail: "/projects/mobius_small.jpg",
     title: "Mobius Digital Systems",
     tags: ["Mobile", "Web"],
+    tools: ["React.js", "GSAP", "React Three Fiber"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -17,6 +18,7 @@ const professionalProjects: Project[] = [
     thumbnail: placeholder,
     title: "Vivavalet",
     tags: ["Mobile", "Web"],
+    tools: ["Flutter", "Nuxt.js"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -26,6 +28,7 @@ const professionalProjects: Project[] = [
     thumbnail: placeholder,
     title: "SP2S",
     tags: ["Web"],
+    tools: ["Nuxt.js", "Digital Ocean"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -35,15 +38,7 @@ const professionalProjects: Project[] = [
     thumbnail: placeholder,
     title: "Tealive",
     tags: ["Mobile"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    id: "levup",
-    slug: "levup",
-    thumbnail: placeholder,
-    title: "LevUp",
-    tags: ["Mobile"],
+    tools: ["Flutter"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -53,6 +48,7 @@ const professionalProjects: Project[] = [
     thumbnail: placeholder,
     title: "HeyJom",
     tags: ["Mobile"],
+    tools: ["Flutter"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -62,6 +58,7 @@ const professionalProjects: Project[] = [
     thumbnail: placeholder,
     title: "PSRT",
     tags: ["Mobile"],
+    tools: ["Flutter"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -71,6 +68,7 @@ const professionalProjects: Project[] = [
     thumbnail: placeholder,
     title: "Tourplus",
     tags: ["Mobile"],
+    tools: ["Swift"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },

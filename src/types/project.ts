@@ -4,5 +4,6 @@ export interface Project {
   thumbnail: string;
   title: string;
   tags: string[];
+  tools: string[];
   description: string;
 }

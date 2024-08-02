@@ -8,6 +8,7 @@ const personalProjects: Project[] = [
     thumbnail: placeholder,
     title: "Makan Apa?",
     tags: ["Mobile"],
+    tools: ["Flutter"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
@@ -17,6 +18,7 @@ const personalProjects: Project[] = [
     thumbnail: placeholder,
     title: "Gesture Controlled Smart Mirror",
     tags: ["Misc"],
+    tools: ["LeapJS", "Javascript"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
