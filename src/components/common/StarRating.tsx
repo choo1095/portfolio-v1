@@ -1,6 +1,5 @@
 import React from "react";
 import StarFilledSvg from "./svg/StarFilledSvg";
-import StarUnfilledSvg from "./svg/StarUnfilledSvg";
 import clsx from "clsx";
 
 interface Props {
