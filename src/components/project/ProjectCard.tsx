@@ -45,7 +45,7 @@ const ProjectCard = (props: Props) => {
 
       {/*  Project Details Sheet */}
       <ProjectSheet
-        className="w-dvw sm:w-[80dvw] sm:max-w-4xl"
+        className="w-dvw sm:w-[80dvw] sm:max-w-2xl"
         slug={project.slug}
       ></ProjectSheet>
     </Sheet>
