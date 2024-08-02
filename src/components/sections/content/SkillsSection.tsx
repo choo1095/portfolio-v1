@@ -31,7 +31,7 @@ const SkillsSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
       <p>{strings.technical_skills.description}</p>
 
-      <div className="space-y-6 mt-5 sm:space-y-0">
+      <div className="space-y-7 mt-5 sm:space-y-5">
         {skills.map((item) => {
           return (
             <SkillCategoryCard

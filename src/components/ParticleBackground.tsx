@@ -35,11 +35,11 @@ const ParticleBackground = (props: Props) => {
       >
         <div className="w-full h-full backdrop-blur-sm"></div>
 
-        <Particles
+        {/* <Particles
           id="tsparticles"
           className="relative -z-20"
           options={options}
-        />
+        /> */}
       </div>
     );
   }

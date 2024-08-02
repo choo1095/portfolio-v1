@@ -25,7 +25,7 @@ const Item = (props: Props) => {
         "px-3 py-0.5 border-primary-800 border bg-primary-800/10 rounded-md relative w-fit text-primary-800 overflow-clip"
       )}
     >
-      <span>{props.children}</span>
+      <span className="text-sm sm:text-base">{props.children}</span>
       <div
         className={clsx(
           "w-full absolute bottom-0 left-0 h-[2.5px] bg-primary-800"

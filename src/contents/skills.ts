@@ -39,16 +39,16 @@ const skills: SkillCategory[] = [
             level: 4,
           },
           {
-            skillName: "Javascript",
-            level: 2,
-          },
-          {
             skillName: "Typescript",
             level: 4,
           },
           {
             skillName: "jQuery",
             level: 3,
+          },
+          {
+            skillName: "Javascript",
+            level: 2,
           },
         ],
       },
@@ -92,14 +92,14 @@ const skills: SkillCategory[] = [
         ],
       },
       {
-        name: "3D Web Animations",
+        name: "3D Web",
         items: [
           {
             skillName: "Three.js",
             level: 2,
           },
           {
-            skillName: "React Three Fiber (R3F)",
+            skillName: "React Three Fiber",
             level: 1,
           },
         ],
@@ -113,12 +113,12 @@ const skills: SkillCategory[] = [
         name: "Frameworks",
         items: [
           {
-            skillName: "Laravel",
-            level: 3,
-          },
-          {
             skillName: "Node.js",
             level: 4,
+          },
+          {
+            skillName: "Laravel",
+            level: 3,
           },
         ],
       },
@@ -145,7 +145,7 @@ const skills: SkillCategory[] = [
     category: "Misc",
     subcategory: [
       {
-        name: "Mobile App Deployment",
+        name: "App Deployment",
         items: [
           {
             skillName: "Play Store",

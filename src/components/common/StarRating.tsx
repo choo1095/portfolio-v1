@@ -22,7 +22,7 @@ const StarRating = (props: Props) => {
         ) : (
           <StarFilledSvg
             key={index}
-            className="fill-stone-400"
+            className="fill-stone-400/60"
             width={14}
             height={14}
           ></StarFilledSvg>
