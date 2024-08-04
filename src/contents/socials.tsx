@@ -1,4 +1,4 @@
-import SocialButton from "@/components/common/LinkedInButton";
+import SocialButton from "@/components/common/SocialButton";
 import LinkedInSvg from "@/components/common/svg/LinkedInSvg";
 import strings from "@/constants/strings";
 import clsx from "clsx";

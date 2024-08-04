@@ -23,11 +23,11 @@ const SocialButton = (props: Props) => {
       <span className="ml-1.5 group-hover/social-link:text-primary-900">
         {props.title}
       </span>
-      <ArrowOutwardsSvg
+      {/* <ArrowOutwardsSvg
         className="fill-primary-900 origin-center scale-0 group-hover/social-link:scale-100 group-hover/social-link:translate-x-1 group-hover/social-link:-translate-y-1 duration-200"
         width={16}
         height={16}
-      ></ArrowOutwardsSvg>
+      ></ArrowOutwardsSvg> */}
     </a>
   );
 };
