@@ -5,5 +5,9 @@ export interface Project {
   title: string;
   tags: string[];
   tools: string[];
+  links?: {
+    title: string;
+    url: string;
+  }[];
   description: string;
 }
