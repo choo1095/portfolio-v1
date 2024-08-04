@@ -14,7 +14,7 @@ interface Props {
 
 const ResumeLink = () => {
   return (
-    <blockquote className="border-l-8 border-solid border-l-primary-900/80 px-5 py-5">
+    <blockquote className="sm:border-l-8 sm:border-solid sm:border-l-primary-900/80 sm:px-5 sm:py-5">
       <span className="font-medium">{strings.about_me.resume.text_1}</span>
       <InlineLink
         link={strings.about_me.resume.link}
@@ -40,7 +40,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
     >
       <SectionHeader>{strings.about_me.header}</SectionHeader>
 
-      <div className="space-y-4 mb-8">
+      <div className="space-y-4 mb-4 sm:mb-8">
         <AboutMeContents></AboutMeContents>
       </div>
       <ResumeLink></ResumeLink>

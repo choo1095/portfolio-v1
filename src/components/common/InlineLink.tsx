@@ -14,9 +14,7 @@ const InlineLink = (props: Props) => {
         target="_blank"
         className="group/resume-link text-primary-900"
       >
-        <span className="font-medium group-hover/resume-link:font-semibold group-active/resume-link:font-semibold">
-          {props.text}
-        </span>
+        <span className="font-medium">{props.text}</span>
         <span className="inline-block align-middle">
           <ArrowOutwardsSvg
             className="group-hover/resume-link:animate-outwards ml-0.5 mb-2"
