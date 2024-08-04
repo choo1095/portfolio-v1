@@ -7,7 +7,14 @@ const professionalProjects: Project[] = [
     thumbnail: "/projects/mobius_small.jpg",
     title: "Mobius Digital Systems",
     tags: ["Web"],
-    tools: ["React.js", "GSAP", "React Three Fiber"],
+    tools: [
+      "React.js",
+      "GSAP",
+      "React Three Fiber",
+      "Laravel",
+      "Filament",
+      "Digital Ocean",
+    ],
     links: [
       {
         title: "mobius-digital.com",
