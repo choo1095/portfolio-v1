@@ -36,7 +36,10 @@ const PersonalProjectsSection = forwardRef<HTMLDivElement, Props>(
         }}
       >
         <SectionHeader>{strings.personal_projects.header}</SectionHeader>
-        <div className="space-y-4">
+
+        <p>{strings.personal_projects.description}</p>
+
+        <div className="mt-5 space-y-4">
           {personalProjects.map((project) => (
             <ProjectCard key={project.id} project={project}></ProjectCard>
           ))}

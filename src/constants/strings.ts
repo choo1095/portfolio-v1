@@ -21,9 +21,13 @@ const strings = {
   },
   professional_projects: {
     header: "Professional Projects",
+    description:
+      "Below is a selection of professional projects I've worked on. Most projects has been publicly released and can be explored through the provided links.",
   },
   personal_projects: {
     header: "Personal Projects",
+    description:
+      "These projects were developed as a hobby to experiment with different techniques or technologies.",
   },
   socials: {
     linkedin: {
