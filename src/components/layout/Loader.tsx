@@ -71,6 +71,7 @@ const useFadeSequenceAnimation = () => {
     };
 
     _animate();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return scope;
