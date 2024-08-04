@@ -9,6 +9,7 @@ const professionalProjects: Project[] = [
     tags: ["Web"],
     tools: [
       "React.js",
+      "TailwindCSS",
       "GSAP",
       "React Three Fiber",
       "Laravel",
@@ -30,7 +31,7 @@ const professionalProjects: Project[] = [
     thumbnail: "/projects/vivavalet_small.jpeg",
     title: "VivaValet",
     tags: ["Mobile", "Web"],
-    tools: ["Flutter", "Nuxt.js"],
+    tools: ["Flutter", "Nuxt.js", "Bootstrap"],
     links: [
       {
         title: "vivavalet.com",
@@ -54,7 +55,7 @@ const professionalProjects: Project[] = [
     thumbnail: "/projects/sp2s_small.jpg",
     title: "SP2S",
     tags: ["Web"],
-    tools: ["Nuxt.js", "Digital Ocean"],
+    tools: ["Nuxt.js", "TailwindCSS", "Digital Ocean"],
     links: [
       {
         title: "SP2S (Malaysia)",
