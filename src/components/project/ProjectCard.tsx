@@ -40,7 +40,7 @@ const ProjectCard = (props: Props) => {
             ))}
           </div>
 
-          <p className="line-clamp-6 text-stone-600 mt-3 leading-normal">
+          <p className="text-stone-600 mt-3 leading-normal">
             {project.description}
           </p>
 
