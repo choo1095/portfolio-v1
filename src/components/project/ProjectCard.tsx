@@ -15,7 +15,7 @@ const ProjectCard = (props: Props) => {
   return (
     <Sheet open={false}>
       {/* Project Card Button */}
-      <SheetTrigger className="hover:cursor-default group/project-card -m-5 p-5 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 sm:grid sm:gap-5 sm:grid-cols-5">
+      <SheetTrigger className="hover:cursor-default group/project-card -m-4 p-4 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 sm:grid sm:gap-5 sm:grid-cols-5">
         <div className="overflow-clip sm:col-span-2">
           <CommonImage
             className="w-full group-hover/project-card:scale-105 delay-100 duration-300"
