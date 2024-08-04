@@ -30,10 +30,10 @@ const ContentSection = (props: Props) => {
     >
       <div className="h-fit lg:col-span-1 lg:sticky lg:top-14">
         <Me></Me>
-        <Socials className="mt-6"></Socials>
+        <Socials className="mt-4 sm:mt-6"></Socials>
         <Nav className="hidden lg:block lg:mt-16" menu={menu}></Nav>
       </div>
-      <div className="mt-14 space-y-10 lg:col-span-2 lg:mt-0 lg:space-y-16">
+      <div className="mt-8 space-y-10 lg:col-span-2 lg:mt-0 lg:space-y-16">
         <AboutMeSection id={menu[0].id}></AboutMeSection>
         <SkillsSection id={menu[1].id}></SkillsSection>
         <ProfessionalProjectsSection
