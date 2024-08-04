@@ -1,7 +1,22 @@
-import { placeholder } from "@/constants/assets";
 import { Project } from "@/types/project";
 
 const personalProjects: Project[] = [
+  {
+    id: "portfolio_v1",
+    slug: "portfolio_v1",
+    thumbnail: "/projects/this_website_small.jpg",
+    title: "Portfolio v1",
+    tags: ["Web"],
+    tools: ["Next.js", "Framer Motion", "TailwindCSS", "Typescript", "Vercel"],
+    links: [
+      {
+        title: "GitHub",
+        url: "https://github.com/choo1095/portfolio-v1",
+      },
+    ],
+    description:
+      "I built this portfolio to showcase the development projects I've worked on over the years. The feature graphic for each project has been created by me in Figma and Photoshop. All icons are taken from Icônes.js. This website is heavily inspired by Brittany Chiang's minimalistic portfolio.",
+  },
   {
     id: "makan_apa",
     slug: "makan_apa",
