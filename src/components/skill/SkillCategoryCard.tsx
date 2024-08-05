@@ -2,6 +2,7 @@ import React from "react";
 import SkillPill from "../common/SkillPill";
 import { SkillCategory } from "@/types/skillCategory";
 import clsx from "clsx";
+import { TooltipProvider } from "../ui/tooltip";
 
 interface Props {
   data: SkillCategory;
@@ -10,7 +11,13 @@ interface Props {
 
 const SkillCategoryCard = (props: Props) => {
   return (
-    <div className={clsx("content_fade", props.className, "flex flex-col")}>
+    <div
+      className={clsx(
+        "content_fade",
+        props.className,
+        "flex relative flex-col"
+      )}
+    >
       <h3 className="flex items-center mb-3 gap-4 sm:mb-4 sm:grid sm:grid-cols-4 sm:gap-5 md:grid-cols-5">
         <div className="h-6 w-1 bg-stone-600/60 sm:w-0 sm:hidden"></div>
         <span className="flex-1 text-sm font-semibold uppercase text-stone-600/60 sm:text-right sm:text-primary-900">
@@ -29,16 +36,19 @@ const SkillCategoryCard = (props: Props) => {
                 {subcategory.name}
               </h4>
             )}
-            <div
-              key={subcategory.name}
-              className="flex flex-wrap gap-2 col-span-2 sm:col-span-3 sm:gap-3 md:col-span-4"
-            >
-              {subcategory.items.map((item) => (
-                <SkillPill key={item.skillName} level={item.level}>
-                  {item.skillName}
-                </SkillPill>
-              ))}
-            </div>
+
+            <TooltipProvider disableHoverableContent={false}>
+              <div
+                key={subcategory.name}
+                className="relative flex flex-wrap gap-2 col-span-2 sm:col-span-3 sm:gap-3 md:col-span-4"
+              >
+                {subcategory.items.map((item) => (
+                  <SkillPill key={item.skillName} level={item.level}>
+                    {item.skillName}
+                  </SkillPill>
+                ))}
+              </div>
+            </TooltipProvider>
           </div>
         ))}
       </div>

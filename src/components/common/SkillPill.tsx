@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { useEffect, useRef, useState } from "react";
-import { Tooltip, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import { Tooltip, TooltipTrigger } from "../ui/tooltip";
 import { TooltipArrow, TooltipContent } from "@radix-ui/react-tooltip";
 import StarRating from "./StarRating";
 
@@ -22,7 +22,7 @@ const Item = (props: Props) => {
     <div
       className={clsx(
         props.className,
-        "px-3 py-0.5 border-primary-800 border bg-primary-800/10 rounded-md relative w-fit text-primary-800 overflow-clip backdrop-blur-md"
+        "px-3 py-0.5 border-primary-800 border bg-primary-800/10 rounded-md relative w-fit text-primary-800 overflow-clip z-10"
       )}
     >
       <span className="text-sm sm:text-base">{props.children}</span>
@@ -113,25 +113,23 @@ const SkillPill = (props: Props) => {
   }, [isTooltipOpen]);
 
   return (
-    <TooltipProvider disableHoverableContent={false}>
-      <Tooltip delayDuration={100} open={isTooltipOpen}>
-        <TooltipTrigger
-          ref={tooltipRef}
-          onMouseDown={() =>
-            !isTooltipOpen ? setIsTooltipOpen(true) : undefined
-          }
-          onMouseEnter={() => setIsTooltipOpen(true)}
-          onMouseLeave={() => setIsTooltipOpen(false)}
-        >
-          <Item className={clsx(props.children)} level={props.level}>
-            {props.children}
-          </Item>
-        </TooltipTrigger>
-        <TooltipContent className="z-50">
-          <HoverPill level={props.level} />
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <Tooltip delayDuration={100} open={isTooltipOpen}>
+      <TooltipTrigger
+        ref={tooltipRef}
+        onMouseDown={() =>
+          !isTooltipOpen ? setIsTooltipOpen(true) : undefined
+        }
+        onMouseEnter={() => setIsTooltipOpen(true)}
+        onMouseLeave={() => setIsTooltipOpen(false)}
+      >
+        <Item className={clsx(props.children)} level={props.level}>
+          {props.children}
+        </Item>
+      </TooltipTrigger>
+      <TooltipContent className="z-50">
+        <HoverPill level={props.level} />
+      </TooltipContent>
+    </Tooltip>
   );
 };
 
