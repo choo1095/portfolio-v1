@@ -15,7 +15,7 @@ const personalProjects: Project[] = [
       },
     ],
     description:
-      "I built this portfolio to showcase the development projects I've worked on over the years. The feature graphic for each project has been created by me and my friend Mike in Figma and Photoshop. All icons are taken from Icônes.js. This website is heavily inspired by Brittany Chiang's minimalistic portfolio.",
+      "I built this portfolio to showcase the development projects I've worked on over the years. The feature graphic for each project has been created by me and my friend Mike in Figma and Photoshop. All icons are taken from Icônes.js. ",
   },
   {
     id: "makan_apa",

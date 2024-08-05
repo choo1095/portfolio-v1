@@ -90,7 +90,7 @@ const Me = () => {
         {strings.me.description}
       </p>
 
-      <div className={clsx("mt-4 flex gap-3 sm:mt-6")}>
+      <div className={clsx("mt-4 flex gap-3 lg:mt-6")}>
         {/* LinkedIn */}
         <div className="me_fade_in">
           <SocialButton
@@ -125,7 +125,7 @@ const ContentSection = (props: Props) => {
         <Me></Me>
         <Nav className="hidden lg:block lg:mt-16" menu={menu}></Nav>
       </div>
-      <div className="mt-8 space-y-10 lg:col-span-2 lg:mt-0 lg:space-y-16">
+      <div className="mt-10 space-y-10 lg:col-span-2 lg:mt-0 lg:space-y-16">
         <AboutMeSection id={menu[0].id}></AboutMeSection>
         <SkillsSection id={menu[1].id}></SkillsSection>
         <ProfessionalProjectsSection
