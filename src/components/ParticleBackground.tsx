@@ -30,7 +30,7 @@ const ParticleBackground = (props: Props) => {
       <div
         className={clsx(
           props.className,
-          "fixed top-0 left-0 -z-10 h-dvh w-dvw"
+          "fixed top-0 left-0 -z-10 h-lvh w-dvw"
         )}
       >
         <div className="w-full h-full backdrop-blur-sm"></div>

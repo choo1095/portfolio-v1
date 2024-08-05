@@ -114,7 +114,7 @@ const LoaderContents = (props: Props) => {
   const scope = useFadeSequenceAnimation();
 
   return (
-    <div className="bg-stone-300 relative w-dvw h-dvh" ref={scope}>
+    <div className="bg-stone-200 relative w-dvw h-dvh" ref={scope}>
       {/* line */}
       <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 screen_container">
         <div
@@ -123,7 +123,7 @@ const LoaderContents = (props: Props) => {
         ></div>
         <div
           id="loader_line_cover"
-          className="relative origin-right w-0 -translate-y-px h-px rounded-full bg-stone-300"
+          className="relative origin-right w-0 -translate-y-px h-px rounded-full bg-stone-200"
         ></div>
       </div>
 
