@@ -19,11 +19,10 @@ const SkillCategoryCard = (props: Props) => {
       )}
     >
       <h3 className="flex items-center mb-3 gap-4 sm:mb-4 sm:grid sm:grid-cols-4 sm:gap-5 md:grid-cols-5">
-        <div className="h-6 w-1 bg-stone-600/60 sm:w-0 sm:hidden"></div>
-        <span className="flex-1 text-sm font-semibold uppercase text-stone-600/60 sm:text-right sm:text-primary-900">
+        <span className="text-primary-900 text-sm font-semibold uppercase sm:text-right">
           {props.data.category}
         </span>
-        <div className="hidden h-px w-auto bg-primary-800/20 col-span-3 sm:block md:col-span-4"></div>
+        <div className="flex-1 h-px w-auto bg-primary-800/20 col-span-3 md:col-span-4"></div>
       </h3>
       <div className="space-y-3 sm:flex-1 sm:space-y-3">
         {props.data.subcategory.map((subcategory) => (
