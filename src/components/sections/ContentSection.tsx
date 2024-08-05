@@ -37,8 +37,8 @@ const useContentShowAnimation = () => {
         }
       );
 
+      // fade in each item in nav bar
       if (isDesktop) {
-        // fade in each item in nav bar
         await animate(
           ".nav_fade_in",
           {
@@ -50,6 +50,11 @@ const useContentShowAnimation = () => {
             ease: "easeInOut",
           }
         );
+      } else {
+        animate(".nav_fade_in", {
+          opacity: 1,
+          transform: "translateX(0)",
+        });
       }
 
       // fade in contents
