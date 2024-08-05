@@ -92,7 +92,10 @@ const ProjectCard = (props: Props) => {
     <Sheet open={false}>
       {/* Project Card Button */}
       <SheetTrigger>
-        <CardContent project={props.project}></CardContent>
+        <CardContent
+          key={props.project.id}
+          project={props.project}
+        ></CardContent>
       </SheetTrigger>
 
       {/*  Project Details Sheet */}

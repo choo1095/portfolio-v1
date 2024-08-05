@@ -21,6 +21,8 @@ const useContentShowAnimation = () => {
 
   useEffect(() => {
     const _animate = async () => {
+      const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
       // fade in my personal info
       await animate(
         ".me_fade_in",
@@ -35,18 +37,20 @@ const useContentShowAnimation = () => {
         }
       );
 
-      // fade in each item in nav bar
-      await animate(
-        ".nav_fade_in",
-        {
-          opacity: 1,
-          transform: "translateX(0)",
-        },
-        {
-          delay: stagger(0.08),
-          ease: "easeInOut",
-        }
-      );
+      if (isDesktop) {
+        // fade in each item in nav bar
+        await animate(
+          ".nav_fade_in",
+          {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+          {
+            delay: stagger(0.08),
+            ease: "easeInOut",
+          }
+        );
+      }
 
       // fade in contents
       await animate([
