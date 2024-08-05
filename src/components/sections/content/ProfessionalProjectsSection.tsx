@@ -20,7 +20,7 @@ const ProfessionalProjectsSection = forwardRef<HTMLDivElement, Props>(
       <InView
         as="section"
         id={props.id}
-        className={clsx(props.className)}
+        className={clsx("content_section", props.className)}
         rootMargin="0% 0% -100% 0%"
         onChange={(inView) => {
           if (inView) {
@@ -30,7 +30,9 @@ const ProfessionalProjectsSection = forwardRef<HTMLDivElement, Props>(
       >
         <SectionHeader>{strings.professional_projects.header}</SectionHeader>
 
-        <p>{strings.professional_projects.description}</p>
+        <p className="content_fade">
+          {strings.professional_projects.description}
+        </p>
 
         <div className="mt-5 space-y-4">
           {professionalProjects.map((project) => (

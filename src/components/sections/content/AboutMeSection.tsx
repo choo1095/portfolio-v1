@@ -1,9 +1,9 @@
 import InlineLink from "@/components/common/InlineLink";
 import SectionHeader from "@/components/common/SectionHeader";
-import ArrowOutwardsSvg from "@/components/common/svg/ArrowOutwardsSvg";
 import strings from "@/constants/strings";
 import AboutMeContents from "@/contents/about_me";
 import { useNavContext } from "@/contexts/useNavContext";
+import clsx from "clsx";
 import React, { forwardRef } from "react";
 import { InView } from "react-intersection-observer";
 
@@ -14,13 +14,13 @@ interface Props {
 
 const ResumeLink = () => {
   return (
-    <blockquote className="sm:border-l-8 sm:border-solid sm:border-l-primary-900/80 sm:px-5 sm:py-5">
+    <p className="content_fade sm:border-l-8 sm:border-solid sm:border-l-primary-900 sm:px-5 sm:py-5">
       <span className="font-medium">{strings.about_me.resume.text_1}</span>
       <InlineLink
         link={strings.about_me.resume.link}
         text={strings.about_me.resume.text_2}
       ></InlineLink>
-    </blockquote>
+    </p>
   );
 };
 
@@ -31,7 +31,7 @@ const AboutMeSection = forwardRef<HTMLDivElement, Props>((props, ref) => {
     <InView
       as="section"
       id={props.id}
-      className="md:py-0"
+      className={clsx("content_section", "md:py-0")}
       onChange={(inView) => {
         if (inView) {
           setCurrentSection(props.id);

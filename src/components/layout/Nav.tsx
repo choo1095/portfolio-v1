@@ -29,7 +29,7 @@ const Nav = (props: Props) => {
     <nav className={clsx(props.className)}>
       <ul>
         {props.menu.map((item) => (
-          <li className="relative" key={item.id}>
+          <li className="nav_fade_in relative" key={item.id}>
             <a
               className="group/nav flex items-center py-3 w-fit"
               href={`#${item.id}`}
@@ -48,7 +48,6 @@ const Nav = (props: Props) => {
                     : { opacity: 0, width: 1 }
                 }
                 transition={{
-                  delay: 0.03,
                   ease: "backIn",
                 }}
                 exit={{ opacity: 0, width: 0 }}
@@ -73,7 +72,6 @@ const Nav = (props: Props) => {
                     : { transform: "translateX(0)", fontWeight: "400" }
                 }
                 transition={{
-                  delay: 0.08,
                   ease: "easeOut",
                 }}
               >

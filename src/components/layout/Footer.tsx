@@ -1,7 +1,11 @@
 import React from "react";
 
 const Footer = () => {
-  return <div className="text-right">© {new Date().getFullYear()}</div>;
+  return (
+    <footer className="content_fade text-right text-stone-400">
+      © {new Date().getFullYear()}
+    </footer>
+  );
 };
 
 export default Footer;

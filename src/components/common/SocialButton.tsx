@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import React from "react";
-import ArrowOutwardsSvg from "./svg/ArrowOutwardsSvg";
 
 interface Props {
   className?: string;

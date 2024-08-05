@@ -10,7 +10,7 @@ interface Props {
 
 const SkillCategoryCard = (props: Props) => {
   return (
-    <div className={clsx(props.className, "flex flex-col")}>
+    <div className={clsx("content_fade", props.className, "flex flex-col")}>
       <h3 className="flex items-center mb-3 gap-4 sm:mb-4 sm:grid sm:grid-cols-4 sm:gap-5 md:grid-cols-5">
         <div className="h-6 w-1 bg-stone-600/60 sm:w-0 sm:hidden"></div>
         <span className="flex-1 text-sm font-semibold uppercase text-stone-600/60 sm:text-right sm:text-primary-900">

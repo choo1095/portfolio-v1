@@ -4,7 +4,7 @@ import React from "react";
 const AboutMeContents = () => {
   return (
     <>
-      <p>
+      <p className="content_fade">
         I began my tech career with native iOS app development using Swift as a
         mobile application developer. I then transitioned to Flutter to meet the
         need for developing Android apps in addition to iOS. This shift allowed
@@ -21,7 +21,7 @@ const AboutMeContents = () => {
         ></InlineLink>
         , a Malaysian software development company.
       </p>
-      <p>
+      <p className="content_fade">
         Even though I have been a mobile apps and web developer for the past
         three years, my journey began elsewhere. I was an accounting student
         during my high school years, which continued into my undergraduate
@@ -29,7 +29,7 @@ const AboutMeContents = () => {
         eventually pivoted to a career in development after persevering through
         and completing my accounting degree.
       </p>
-      <p>
+      <p className="content_fade">
         Throughout my journey, I have been experimenting with and exploring
         different programming languages, constantly broadening my technical
         knowledge, embracing new challenges along the way so that I can be a

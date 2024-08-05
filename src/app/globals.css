@@ -22,7 +22,7 @@
   --color-primary-950: #470a08;
   --color-primary: #9e1a16;
 
-  background-color: #d6d3d1;
+  background-color: #e7e5e4;
   scroll-behavior: smooth;
 }
 
@@ -51,7 +51,7 @@ h3 {
 }
 
 p, span { 
-  @apply text-base font-normal leading-relaxed;
+  @apply text-justify text-base font-normal leading-relaxed md:text-left;
 }
 
 @layer utilities {
@@ -65,6 +65,18 @@ p, span {
 
   .section_padding { 
     @apply py-8 sm:py-10 xl:py-14;
+  }
+
+  .me_fade_in { 
+    @apply opacity-0 translate-y-[20px];
+  }
+
+  .content_fade { 
+    @apply opacity-0 translate-y-[12px];
+  }
+
+  .nav_fade_in { 
+    @apply opacity-0 translate-x-[-20px];
   }
 }
 
