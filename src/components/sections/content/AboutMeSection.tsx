@@ -14,7 +14,7 @@ interface Props {
 
 const ResumeLink = () => {
   return (
-    <p className="content_fade sm:border-l-8 sm:border-solid sm:border-l-primary-900 sm:px-5 sm:py-5">
+    <p className="content_fade lg:border-l-8 lg:border-solid lg:border-l-primary-900 lg:px-5 lg:py-5">
       <span className="font-medium">{strings.about_me.resume.text_1}</span>
       <InlineLink
         link={strings.about_me.resume.link}
