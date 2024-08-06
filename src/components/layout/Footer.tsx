@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="content_fade text-sm flex flex-col sm:flex-row sm:gap-12">
+    <footer className="content_fade pt-5 text-sm flex flex-col sm:flex-row sm:gap-12 lg:mt-0">
       <h4 className="uppercase text-primary-900 font-semibold mb-2">
         Special thanks
       </h4>

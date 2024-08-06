@@ -121,7 +121,7 @@ const ContentSection = (props: Props) => {
         "screen_container grid section_padding relative lg:grid-cols-3 lg:gap-10 xl:gap-20"
       )}
     >
-      <div className="h-fit lg:col-span-1 lg:sticky lg:top-14">
+      <div className="h-fit lg:col-span-1 lg:sticky lg:top-10 xl:top-14">
         <Me></Me>
         <Nav className="hidden lg:block lg:mt-16" menu={menu}></Nav>
       </div>

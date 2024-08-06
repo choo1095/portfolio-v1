@@ -33,7 +33,7 @@ const ParticleBackground = (props: Props) => {
           "fixed top-0 left-0 -z-10 h-lvh w-dvw"
         )}
       >
-        <div className="w-full h-full backdrop-blur-sm"></div>
+        <div className="w-full h-full bg-stone-200/20 backdrop-blur-sm"></div>
 
         <Particles
           id="tsparticles"

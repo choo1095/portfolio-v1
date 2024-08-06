@@ -13,7 +13,7 @@ const CardContent = (props: Props) => {
   const { project } = props;
 
   return (
-    <div className="content_fade hover:cursor-default group/project-card -m-4 p-4 text-left items-start rounded-sm hover:backdrop-blur-md hover:bg-stone-500/5 sm:grid sm:gap-5 sm:grid-cols-5">
+    <div className="content_fade hover:cursor-default group/project-card -m-4 p-4 text-left items-start rounded-sm hover:bg-stone-500/5 sm:grid sm:gap-5 sm:grid-cols-5">
       <div className="content_fade overflow-clip sm:col-span-2">
         <CommonImage
           className="w-full group-hover/project-card:scale-105 delay-100 duration-300"
