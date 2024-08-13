@@ -39,7 +39,7 @@ const PersonalProjectsSection = forwardRef<HTMLDivElement, Props>(
 
         <p className="content_fade">{strings.personal_projects.description}</p>
 
-        <div className="mt-5 space-y-10">
+        <div className="mt-5 space-y-10 lg:space-y-8">
           {personalProjects.map((project) => (
             <ProjectCard key={project.id} project={project}></ProjectCard>
           ))}
