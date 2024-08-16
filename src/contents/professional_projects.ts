@@ -119,7 +119,7 @@ const professionalProjects: Project[] = [
     id: "up-2",
     slug: "up-2",
     thumbnail: "/projects/up-2_small.jpg",
-    title: "Unnamed Project",
+    title: "Asia Pacific Breweries Singapore",
     tags: ["Mobile"],
     tools: ["Flutter"],
     links: [
@@ -129,7 +129,7 @@ const professionalProjects: Project[] = [
       },
     ],
     description:
-      "This internal training app gamifies staff learning at a beer company with daily tasks and reflections, continuous streaks, point-based challenges, and diverse training modules such as quizzes, studies, and workshops. It also offers rewards like discounts and vouchers to encourage users to maintain their training streak.",
+      "This internal training app gamifies staff learning at Asia Pacific Breweries (APB) with daily tasks and reflections, continuous streaks, point-based challenges, and diverse training modules such as quizzes, studies, and workshops. It also offers rewards like discounts and vouchers to encourage users to maintain their training streak.",
   },
   {
     id: "heyjom",
